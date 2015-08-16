@@ -33,6 +33,56 @@ alias dtest='cd ~/codes/test'
 alias dbooks='cd ~/codes/misc/books'
 alias ddoc='cd ~/codes/doc'
 
+# Yahoo
+alias dy='cd ~/codes/yahoo'
+alias dygit='cd ~/codes/yahoo/github'
+alias dyhack='cd ~/codes/yahoo/hack'
+alias dyquickhack='cd ~/codes/yahoo/hack/quickhack'
+alias dydashboard='dyhack && cd dashboard'
+alias dytrain='cd ~/codes/yahoo/training'
+alias dysb='cd ~/codes/yahoo/hack/sprintboard-booster'
+alias dydebug='dy && cd debug'
+alias dddebug='ddesk && cd debug'
+alias dymaple='cd ~/codes/yahoo/lego_common/maple'
+alias dymaplelibs='cd ~/codes/yahoo/lego_common/maplelibs'
+alias dyivy='cd ~/codes/yahoo/ivy'
+alias dyvyc='cd ~/codes/yahoo/vyc'
+alias dpfront='cd ~/codes/yahoo/projects/frontpage'
+alias dpdemo='cd ~/codes/yahoo/projects/demo'
+alias dyscreen='cd ~/codes/yahoo/screen'
+alias dylego='cd ~/codes/yahoo/lego'
+alias dytouch='cd ~/codes/yahoo/touchdown'
+alias dymodown='cd ~/codes/yahoo/modown'
+alias dyape='cd ~/codes/yahoo/ape'
+alias dywaterfall='cd ~/codes/yahoo/waterfall'
+alias dytachyon='cd ~/codes/yahoo/tachyon'
+alias dynext='cd ~/codes/yahoo/next'
+alias dylasso='cd ~/codes/yahoo/next/lasso'
+alias dylassod='cd ~/codes/yahoo/next/lasso-demo'
+alias dylassov='cd ~/codes/yahoo/next/lasso-viewcounts'
+alias dytdapvid='cd ~/codes/yahoo/next/td-applet-video'
+alias dyarr='cd ~/codes/yahoo/arrow'
+alias dyfront='cd ~/codes/yahoo/frontpage'
+alias dyios='cd ~/codes/yahoo/ios'
+alias dymediaos='cd ~/codes/yahoo/y/mediaos'
+alias dyhsiatono='cd ~/codes/yahoo/hsiatono'
+alias dyherry='cd ~/codes/yahoo/herry'
+alias dhhsiatono='dyhsiatono && cd td-applet-hsiatono'
+alias dyypp='cd ~/codes/yahoo/ypp'
+alias dyyplayer='dyypp && cd VideoPlayer'
+alias dyvid='cd ~/codes/yahoo/Video'
+alias dyats='cd ~/codes/yahoo/lego_common/ats'
+alias dyavid='dyats && cd ats_config_r_video_prod'
+alias dyamedia='dyats && cd ats_header_rewrite_globalmedia'
+alias dvplayerdev='dyvideo && cd videoplayer-dev'
+alias dvplayerimage='dyvideo && cd videoplayer-imageonload'
+alias dvtestplayer='dyvideo && cd testplayer'
+alias dvvisualseek='dyvideo && cd visual_seek'
+alias dvscreen='dyvideo && cd screen-web'
+alias dhscreen='dyhsiatono && cd screen-web'
+alias dvscreenv='dyvideo && cd screen-web-viewcounts'
+alias dscreeng='cd ~/codes/yahoo/herry/screen-web'
+
 # Ruby
 alias drbj='cd ~/codes/rubyapp/bookjetty'
 alias dfgraph='cd ~/codes/ruby/fgraph'
@@ -70,6 +120,9 @@ alias dkconfit='dnkra && cd confit'
 alias dklusca='dnkra && cd lusca'
 
 alias deexp='dnexp && cd express'
+
+# Obj App
+alias dotest='dobjapp && cd test'
 
 # Misc
 alias dmawe='dmisc && cd maximum-awesome'
@@ -196,8 +249,14 @@ alias stapache='sudo apachectl stop'
 alias vhttpd='dapache && sudo vi httpd.conf'
 alias vhttpv='dapache && sudo vi extra/httpd-vhosts.conf'
 
+# Application Support
+alias daps='cd ~/Library/Application\ Support'
+alias daxcode='cd ~/Library/Application\ Support/Developer/Shared/Xcode'
+alias dxplugin='daxcode && cd Plug-ins'
+
 # Xcode
 alias dxddata='cd ~/Library/Developer/Xcode/DerivedData'
+alias dxudata='cd ~/Library/Developer/Xcode/UserData'
 alias dips='cd ~/Library/Application\ Support/iPhone\ Simulator/7.1'
 alias dipsapp='cd ~/Library/Application\ Support/iPhone\ Simulator/7.1/Applications'
 alias dipsdoc='cd ~/Library/Application\ Support/iPhone\ Simulator/7.1/Documents'
@@ -236,6 +295,7 @@ function jsgrep() {
 }
 
 # Karabiner
+alias dkar='cd ~/Library/Application\ Support/Karabiner'
 alias vkvim='sudo vi /Applications/Karabiner.app/Contents/Resources/include/checkbox/vim_emu/vim_emu_replacementdef.xml'
 alias vkpriv='sudo vi ~/Library/Application\ Support/Karabiner/private.xml'
 
@@ -243,3 +303,4 @@ alias vkpriv='sudo vi ~/Library/Application\ Support/Karabiner/private.xml'
 alias dtkra='dntest && cd test-kraken'
 alias dhkra='dgithub && cd kraken'
 alias dtwebpack='dntest && cd test-webpack'
+
