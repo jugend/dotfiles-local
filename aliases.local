@@ -130,6 +130,9 @@ alias dmawe='dmisc && cd maximum-awesome'
 # Node Util
 alias mochac='mocha --compilers coffee-script'
 
+# Google Drive
+alias dgdr='cd ~/Google\ Drive'
+
 # Dropbox
 alias ddrop='cd ~/Dropbox'
 alias ddkd='cd ~/Dropbox/kursdesign'
