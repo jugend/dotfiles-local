@@ -33,6 +33,10 @@ alias dtest='cd ~/codes/test'
 alias dbooks='cd ~/codes/misc/books'
 alias ddoc='cd ~/codes/doc'
 
+# Paypal
+alias dp='cd ~/codes/paypal'
+alias dppart='dp && cd conspartneronbnodeweb'
+
 # Yahoo
 alias dy='cd ~/codes/yahoo'
 alias dygit='cd ~/codes/yahoo/github'

@@ -6,7 +6,7 @@ export PATH="$PATH:$HOME/.rvm/bin"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # Ruby Motion
-export RUBYMOTION_ANDROID_SDK=/Users/herry/.rubymotion-android/sdk
+export RUBYMOTION_ANDROID_SDK=~/.rubymotion-android/sdk
 
 # Disable logout Ctrl-D shortcut
 # IGNOREEOF=10
@@ -28,16 +28,18 @@ export PATH=$PATH:./node_modules/.bin:$HOME/node_modules/.bin
 export NODE_PATH=/usr/local/lib/jsctags/:$NODE_PATH
 
 # Nvm
-export NVM_DIR="/Users/herry/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+# export NVM_DIR="/Users/hsiatono/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
 
 # Travis
-[ -f /Users/herry/.travis/travis.sh ] && source /Users/herry/.travis/travis.sh
+[ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
 
 # Java
 export JAVA_HOME="/usr/libexec/java_home -v 1.7"
 
 # Auto start tmux
-if command -v tmux>/dev/null; then
-  [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
-fi
+# if command -v tmux>/dev/null; then
+#   [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
+# fi
