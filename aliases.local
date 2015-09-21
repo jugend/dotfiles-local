@@ -1,6 +1,6 @@
 # Directories
 alias dcodes='cd ~/codes'
-alias drapp='cd ~/codes/rubyapp'
+
 alias druby='cd ~/codes/ruby'
 alias dpapp='cd ~/codes/phpapp'
 alias dphp='cd ~/codes/php'
@@ -35,7 +35,26 @@ alias ddoc='cd ~/codes/doc'
 
 # Paypal
 alias dp='cd ~/codes/paypal'
-alias dppart='dp && cd conspartneronbnodeweb'
+alias dpcweb='dp && cd consumerweb'
+alias dppart='dp && cd partneronboarding'
+alias dpfront='dp && cd frontend'
+alias dpreact='dp && cd react'
+alias dpi18n='dp && cd i18n'
+alias dpcheckout='dp && cd checkout'
+alias dpninfra='dp && cd nodeinfra'
+alias dptmp='dp && cd tmp'
+
+alias dpcon='dpcweb && cd conspartneronbnodeweb'
+alias dpcdata='dppart && cd conspartneronb-countrydata'
+alias dptes='dpcweb && cd consonbdnodeweb'
+alias dptcdata='dpcweb && cd onboarding-countrydata'
+
+alias vpcon='dpcon && vim'
+alias vpcdata='dpcdata && vim'
+alias vptes='dptes && vim'
+alias vptcdata='dptcdata && vim'
+
+alias grbdev='git fetch upstream && git rebase upstream/develop'
 
 # Yahoo
 alias dy='cd ~/codes/yahoo'
@@ -51,8 +70,8 @@ alias dymaple='cd ~/codes/yahoo/lego_common/maple'
 alias dymaplelibs='cd ~/codes/yahoo/lego_common/maplelibs'
 alias dyivy='cd ~/codes/yahoo/ivy'
 alias dyvyc='cd ~/codes/yahoo/vyc'
-alias dpfront='cd ~/codes/yahoo/projects/frontpage'
-alias dpdemo='cd ~/codes/yahoo/projects/demo'
+alias dypfront='cd ~/codes/yahoo/projects/frontpage'
+alias dypdemo='cd ~/codes/yahoo/projects/demo'
 alias dyscreen='cd ~/codes/yahoo/screen'
 alias dylego='cd ~/codes/yahoo/lego'
 alias dytouch='cd ~/codes/yahoo/touchdown'
@@ -311,3 +330,18 @@ alias dtkra='dntest && cd test-kraken'
 alias dhkra='dgithub && cd kraken'
 alias dtwebpack='dntest && cd test-webpack'
 
+# Git
+alias rgithub='repogithub'
+alias rpaypal='repopaypal'
+
+function repogithub() {
+  mv ~/.npmrc.bak ~/.npmrc
+  git config --global user.email 'herryanto@gmail.com'
+  git config --global user.name 'Herryanto Siatono'
+}
+
+function repopaypal() {
+  mv ~/.npmrc ~/.npmrc.bak
+  git config --global --unset user.email
+  git config --global --unset user.name
+}
