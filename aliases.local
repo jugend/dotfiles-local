@@ -125,6 +125,7 @@ alias dnotes='cd ~/codes/misc/notes'
 # Node App
 alias dnlives='dnapp && cd peepcode/livestats'
 alias dntexpress='dnapp && cd express'
+alias dnreact='dnapp && cd react'
 alias dnconnect='dnapp && cd node/connect'
 alias dntest='dnapp && cd test'
 alias dnboil='dnapp && cd boilerplate'
