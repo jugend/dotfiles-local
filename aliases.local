@@ -132,6 +132,7 @@ alias dnboil='dnapp && cd boilerplate'
 alias dnopen='dnapp && cd opensource'
 alias dnwskit='dnapp && cd google/web-starter-kit'
 alias dnwebpack='dnapp && cd test/test-webpack'
+alias dnreact='dnapp && cd react'
 
 # Node
 alias dnnode='dnode && cd node'
@@ -346,3 +347,9 @@ function repopaypal() {
   git config --global --unset user.email
   git config --global --unset user.name
 }
+
+# Flow
+alias f='flow'
+alias fcheck='flow check'
+alias fchecka='flow check --all'
+alias fstop='flow stop'
