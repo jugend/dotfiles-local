@@ -32,6 +32,7 @@ alias dsapp='cd ~/codes/swiftapp'
 alias dtest='cd ~/codes/test'
 alias dbooks='cd ~/codes/misc/books'
 alias ddoc='cd ~/codes/doc'
+alias dand='cd ~/codes/android'
 
 # Paypal
 alias dp='cd ~/codes/paypal'
@@ -54,7 +55,12 @@ alias vpcdata='dpcdata && vim'
 alias vptes='dptes && vim'
 alias vptcdata='dptcdata && vim'
 
-alias grbdev='git fetch upstream && git rebase upstream/develop'
+alias gfmdevelop='git fetch upstream && git merge upstream/develop'
+alias gcodevelop='git checkout develop'
+alias gpodevelop='git push origin develop'
+
+alias nmindex='nmon -w config -w controllers -w lib -w models -w routes index.js'
+alias ndindex='NODE_DEBUG=kraken/views,kraken/events,kraken/settings,kraken/bootstrap,kraken/middleware DEBUG=express:application,express:router,express:view nmindex'
 
 # Yahoo
 alias dy='cd ~/codes/yahoo'
@@ -126,6 +132,7 @@ alias dnotes='cd ~/codes/misc/notes'
 alias dnlives='dnapp && cd peepcode/livestats'
 alias dntexpress='dnapp && cd express'
 alias dnreact='dnapp && cd react'
+alias drnative='dcodes && cd react-native'
 alias dnconnect='dnapp && cd node/connect'
 alias dntest='dnapp && cd test'
 alias dnboil='dnapp && cd boilerplate'
@@ -344,8 +351,8 @@ function repogithub() {
 
 function repopaypal() {
   mv ~/.npmrc ~/.npmrc.bak
-  git config --global --unset user.email
-  git config --global --unset user.name
+  git config --global user.email 'hsiatono@paypal.com'
+  git config --global user.name 'Herryanto Siatono'
 }
 
 # Flow
