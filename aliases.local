@@ -324,6 +324,7 @@ alias wp='webpack'
 alias wpcolors='webpack --process --colors'
 alias wpwatch='webpack --process --colors --watch'
 alias wpdev='webpack-dev-server'
+alias wpdevconfig='webpack-dev-server --config'
 alias wpdevhot='webpack-dev-server --hot --inline'
 
 # Json grep

@@ -22,16 +22,16 @@ export RUBYMOTION_ANDROID_SDK=~/.rubymotion-android/sdk
 # CLIENT_IP=`echo $SSH_CLIENT | awk '{print $1}'`
 # export DISPLAY="$CLIENT_IP:0"
 
-# Node
-export NODE_PATH=$NODE_PATH:`npm root -g`
-export PATH=$PATH:./node_modules/.bin:$HOME/node_modules/.bin
-export NODE_PATH=/usr/local/lib/jsctags/:$NODE_PATH
-
 # Nvm
 export NVM_DIR="/Users/hsiatono/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
+
+# Node
+export NODE_PATH=$NODE_PATH:`npm root -g`
+export PATH=$PATH:./node_modules/.bin:$HOME/node_modules/.bin
+export NODE_PATH=/usr/local/lib/jsctags/:$NODE_PATH
 
 # Travis
 [ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
