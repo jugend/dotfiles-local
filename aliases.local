@@ -325,8 +325,12 @@ alias dhctest='dhtest && cd test-cocoapods'
 
 # Webpack
 alias wp='webpack'
-alias wpd='webpack-dev-server'
-alias wpdh='webpack-dev-server --hot --inline'
+alias wpcolors='webpack --process --colors'
+alias wpwatch='webpack --process --colors --watch'
+alias wpconfig='webpack --config'
+alias wpdev='webpack-dev-server'
+alias wpdevconfig='webpack-dev-server --config'
+alias wpdevhot='webpack-dev-server --hot --inline'
 
 # Json grep
 function jsgrep() {
