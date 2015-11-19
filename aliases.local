@@ -39,16 +39,19 @@ alias dp='cd ~/codes/paypal'
 alias dpcweb='dp && cd consumerweb'
 alias dppart='dp && cd partneronboarding'
 alias dpfront='dp && cd frontend'
-alias dpreact='dp && cd react'
 alias dpi18n='dp && cd i18n'
 alias dpcheckout='dp && cd checkout'
 alias dpninfra='dp && cd nodeinfra'
+alias dphsiatono='dp && cd hsiatono'
 alias dptmp='dp && cd tmp'
 
 alias dpcon='dpcweb && cd conspartneronbnodeweb'
 alias dpcdata='dppart && cd conspartneronb-countrydata'
 alias dptes='dpcweb && cd consonbdnodeweb'
 alias dptcdata='dpcweb && cd onboarding-countrydata'
+
+alias dpreact='dp && cd react'
+alias dprcom='dpreact && cd components'
 
 alias vpcon='dpcon && vim'
 alias vpcdata='dpcdata && vim'
@@ -158,6 +161,7 @@ alias dotest='dobjapp && cd test'
 
 # Misc
 alias dmawe='dmisc && cd maximum-awesome'
+alias ctproj='ctags -R --exclude=.git --exclude=node_modules --exclude=test --exclude=.build'
 
 # Node Util
 alias mochac='mocha --compilers coffee-script'
