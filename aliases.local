@@ -21,8 +21,6 @@ alias dhapp='cd ~/codes/html5app'
 alias dmisc='cd ~/codes/misc'
 alias dbashinit='cd ~/codes/misc/bash_init'
 alias dgadm='cd ~/codes/misc/gitosis-admin'
-alias dmojito='cd ~/codes/mojito'
-alias dmapp='cd ~/codes/mojitoapp'
 alias dgithub='cd ~/codes/github'
 alias ddot='cd ~/codes/github/dotfiles'
 alias ddotl='cd ~/codes/github/dotfiles-local'
@@ -58,7 +56,7 @@ alias vpcdata='dpcdata && vim'
 alias vptes='dptes && vim'
 alias vptcdata='dptcdata && vim'
 
-alias gfmdevelop='git fetch upstream && git merge upstream/develop'
+alias gplupdev='git pull upstream develop'
 alias gcodevelop='git checkout develop'
 alias gpodevelop='git push origin develop'
 
@@ -352,13 +350,13 @@ alias rgithub='repogithub'
 alias rpaypal='repopaypal'
 
 function repogithub() {
-  mv ~/.npmrc.bak ~/.npmrc
+  npm config set registry 'https://registry.npmjs.org'
   git config --global user.email 'herryanto@gmail.com'
   git config --global user.name 'Herryanto Siatono'
 }
 
 function repopaypal() {
-  mv ~/.npmrc ~/.npmrc.bak
+  npm config set registry 'http://npm.paypal.com'
   git config --global user.email 'hsiatono@paypal.com'
   git config --global user.name 'Herryanto Siatono'
 }
