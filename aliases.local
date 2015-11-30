@@ -57,8 +57,8 @@ alias vptes='dptes && vim'
 alias vptcdata='dptcdata && vim'
 
 alias gplupdev='git pull upstream develop'
-alias gcodevelop='git checkout develop'
-alias gpodevelop='git push origin develop'
+alias gcodev='git checkout develop'
+alias gpodev='git push origin develop'
 
 alias nmindex='nmon -w config -w controllers -w lib -w models -w routes index.js'
 alias ndindex='NODE_DEBUG=kraken/views,kraken/events,kraken/settings,kraken/bootstrap,kraken/middleware DEBUG=express:application,express:router,express:view nmindex'
@@ -264,7 +264,6 @@ alias iprenew='sudo ifconfig en0 down;sudo ifconfig en0 mtu 1500 up'
 # Generate strings file
 alias ogens='genstrings ./Classes/*.m'
 
-alias m='mate'
 alias r='rails'
 alias nd='node debug'
 alias gr='grunt'
