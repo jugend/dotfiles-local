@@ -56,8 +56,8 @@ alias vpcdata='dpcdata && vim'
 alias vptes='dptes && vim'
 alias vptcdata='dptcdata && vim'
 
-alias gplupdev='git pull upstream develop'
 alias gcodev='git checkout develop'
+alias gpludev='git pull upstream develop'
 alias gpodev='git push origin develop'
 
 alias nmindex='nmon -w config -w controllers -w lib -w models -w routes index.js'
