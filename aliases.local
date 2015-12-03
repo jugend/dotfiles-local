@@ -142,6 +142,17 @@ alias dnwskit='dnapp && cd google/web-starter-kit'
 alias dnwebpack='dnapp && cd test/test-webpack'
 alias dnreact='dnapp && cd react'
 
+# React
+alias drreact='dnreact && cd react'
+alias drflux='dnreact && cd flux'
+alias drweb='dnreact && cd webpack'
+alias dred='dnreact && cd redux'
+
+alias dtreact='dntest && cd test-react'
+alias dtflux='dntest && cd test-react'
+alias dtweb='dntest && cd test-webpack'
+alias dtred='dntest && cd test-redux'
+
 # Node
 alias dnnode='dnode && cd node'
 alias dnkra='dnode && cd kraken'
