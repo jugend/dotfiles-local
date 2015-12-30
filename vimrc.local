@@ -1,0 +1,4 @@
+" Local settings
+
+" Gist Notes
+noremap <leader><leader>td :Gist 9172d4ef6ef95c7dc4fb<cr>

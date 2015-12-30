@@ -28,7 +28,7 @@ source $(brew --prefix nvm)/nvm.sh
 
 # Node
 export NODE_PATH=$NODE_PATH:`npm root -g`
-export PATH=$PATH:./node_modules/.bin:$HOME/node_modules/.bin
+export PATH=./node_modules/.bin:$HOME/node_modules/.bin:$PATH
 export NODE_PATH=/usr/local/lib/jsctags/:$NODE_PATH
 
 # Travis
