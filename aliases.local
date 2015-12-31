@@ -34,7 +34,7 @@ alias dtest='cd ~/codes/test'
 alias dbooks='cd ~/codes/misc/books'
 alias ddoc='cd ~/codes/doc'
 alias dand='cd ~/codes/android'
-alias dreact='cd ~/codes/react'
+alias drea='cd ~/codes/react'
 
 # Paypal
 alias dp='cd ~/codes/paypal'
@@ -145,7 +145,6 @@ alias dnotes='cd ~/codes/misc/notes'
 # Node App
 alias dnlives='dnapp && cd peepcode/livestats'
 alias dntexpress='dnapp && cd express'
-alias dreact='dcodes && cd react'
 alias drnative='dcodes && cd react-native'
 alias dnconnect='dnapp && cd node/connect'
 alias dntest='dnapp && cd test'
@@ -155,12 +154,12 @@ alias dnwskit='dnapp && cd google/web-starter-kit'
 alias dnwebpack='dnapp && cd test/test-webpack'
 
 # React
-alias drreact='dreact && cd react'
-alias drflux='dreact && cd flux'
-alias drweb='dreact && cd webpack/webpack'
-alias drrak='dreact && cd rakt'
-alias drred='dreact && cd redux'
-alias drnat='dreact && cd react-native'
+alias drreact='drea && cd react'
+alias drflux='drea && cd flux'
+alias drweb='drea && cd webpack/webpack'
+alias drrak='drea && cd rakt'
+alias drred='drea && cd redux'
+alias drnat='drea && cd react-native'
 
 # Redux
 alias drered='drred && cd redux'
