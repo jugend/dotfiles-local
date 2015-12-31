@@ -154,22 +154,24 @@ alias dnwskit='dnapp && cd google/web-starter-kit'
 alias dnwebpack='dnapp && cd test/test-webpack'
 
 # React
-alias drreact='drea && cd react'
+alias drrea='drea && cd react'
 alias drflux='drea && cd flux'
 alias drweb='drea && cd webpack/webpack'
 alias drrak='drea && cd rakt'
 alias drred='drea && cd redux'
 alias drnat='drea && cd react-native'
+alias drtest='drea && cd test'
+
+alias drtrea='drtest && cd test-react'
+alias drtred='drtest && cd test-redux'
+alias drtweb='drtest && cd test-webpack'
+alias drtflux='drtest && cd test-flux'
+alias drtjest='drtest && cd test-jest'
 
 # Redux
 alias drered='drred && cd redux'
 alias dreboil='drred && cd boilerplate'
 alias dreapp='drred && cd apps'
-
-alias dtreact='dntest && cd test-react'
-alias dtflux='dntest && cd test-react'
-alias dtweb='dntest && cd test-webpack'
-alias dtred='dntest && cd test-redux'
 
 # Node
 alias dnnode='dnode && cd node'
@@ -370,9 +372,8 @@ alias vkvim='sudo vi /Applications/Karabiner.app/Contents/Resources/include/chec
 alias vkpriv='sudo vi ~/Library/Application\ Support/Karabiner/private.xml'
 
 # Temporary Shortcuts
-alias dtkra='dntest && cd test-kraken'
+alias dntkra='dntest && cd test-kraken'
 alias dhkra='dgithub && cd kraken'
-alias dtweb='dntest && cd test-webpack'
 alias dtweb6='dtwebpack && cd babel6'
 
 # Git
