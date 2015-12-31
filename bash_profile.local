@@ -1,13 +1,3 @@
-# Python
-export PYTHONPATH=~/lib/python2.6/site-packages
-
-# Rvm
-export PATH="$PATH:$HOME/.rvm/bin"
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
-# Ruby Motion
-export RUBYMOTION_ANDROID_SDK=~/.rubymotion-android/sdk
-
 # Disable logout Ctrl-D shortcut
 # IGNOREEOF=10
 # set -o ignoreeof  # Same as setting IGNOREEOF=10
@@ -22,20 +12,29 @@ export RUBYMOTION_ANDROID_SDK=~/.rubymotion-android/sdk
 # CLIENT_IP=`echo $SSH_CLIENT | awk '{print $1}'`
 # export DISPLAY="$CLIENT_IP:0"
 
+# Python
+export PYTHONPATH=~/lib/python2.6/site-packages
+
 # Nvm
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
 # Node
-export NODE_PATH=$NODE_PATH:`npm root -g`
-export PATH=./node_modules/.bin:$HOME/node_modules/.bin:$PATH
-export NODE_PATH=/usr/local/lib/jsctags/:$NODE_PATH
+export NODE_PATH=$NODE_PATH:/usr/local/lib/jsctags/:$`npm root -g`
+export PATH=$PATH:./node_modules/.bin:$HOME/node_modules/.bin
 
 # Travis
 [ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
 
 # Java
 export JAVA_HOME="/usr/libexec/java_home -v 1.7"
+
+# Rvm
+export PATH="$PATH:$HOME/.rvm/bin"
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+# Ruby Motion
+export RUBYMOTION_ANDROID_SDK=~/.rubymotion-android/sdk
 
 # Auto start tmux
 if command -v tmux>/dev/null; then
