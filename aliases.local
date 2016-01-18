@@ -44,13 +44,14 @@ alias dpfront='dp && cd frontend'
 alias dpi18n='dp && cd i18n'
 alias dpcheck='dp && cd checkout'
 alias dpninfra='dp && cd nodeinfra'
+alias dpnode='dp && cd nodejs'
 alias dphsiatono='dp && cd hsiatono'
 alias dptmp='dp && cd tmp'
 alias dptrain='dp && cd training'
 alias dpcom='dp && cd compliance'
 
-alias dpcon='dpcweb && cd conspartneronbnodeweb'
-alias dpcdata='dppart && cd conspartneronb-countrydata'
+alias dped='dpcweb && cd conspartneronbnodeweb'
+alias dpecdata='dppart && cd conspartneronb-countrydata'
 alias dptes='dpcweb && cd consonbdnodeweb'
 alias dptcdata='dpcweb && cd onboarding-countrydata'
 
@@ -127,9 +128,11 @@ alias dvscreenv='dyvideo && cd screen-web-viewcounts'
 alias dscreeng='cd ~/codes/yahoo/herry/screen-web'
 
 # Ruby
-alias drbj='cd ~/codes/rubyapp/bookjetty'
-alias dfgraph='cd ~/codes/ruby/fgraph'
-alias daecs='cd ~/codes/ruby/amazon-ecs'
+alias dbj='cd ~/codes/rubyapp/bookjetty'
+
+# Github
+alias dfgraph='cd ~/codes/github/fgraph'
+alias daecs='cd ~/codes/github/amazon-ecs'
 
 # PHP
 alias dazone='cd ~/codes/phpapp/azone'
@@ -159,8 +162,10 @@ alias drflux='drea && cd flux'
 alias drweb='drea && cd webpack/webpack'
 alias drrak='drea && cd rakt'
 alias drred='drea && cd redux'
-alias drnat='drea && cd react-native'
 alias drtest='drea && cd test'
+
+alias drnat='drea && cd react-native'
+alias drintl='drea && cd react-intl'
 
 alias drtrea='drtest && cd test-react'
 alias drtred='drtest && cd test-redux'
