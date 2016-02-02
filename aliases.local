@@ -49,6 +49,7 @@ alias dphsiatono='dp && cd hsiatono'
 alias dptmp='dp && cd tmp'
 alias dptrain='dp && cd training'
 alias dpcom='dp && cd compliance'
+alias dpgit='dp && cd github'
 
 alias dped='dpcweb && cd conspartneronbnodeweb'
 alias dpecom='dpcweb && cd conspartneronb-components'
