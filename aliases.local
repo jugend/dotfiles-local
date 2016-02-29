@@ -38,13 +38,15 @@ alias drea='cd ~/codes/react'
 
 # Paypal
 alias dp='cd ~/codes/paypal'
-alias dpcweb='dp && cd consumerweb'
+alias dpcon='dp && cd consumerweb'
+alias dpconui='dp && cd consumerwebui'
 alias dppart='dp && cd partneronboarding'
 alias dpfront='dp && cd frontend'
 alias dpi18n='dp && cd i18n'
 alias dpcheck='dp && cd checkout'
 alias dpninfra='dp && cd nodeinfra'
 alias dpnode='dp && cd nodejs'
+alias dpnserv='dp && cd nodeservices'
 alias dphsiatono='dp && cd hsiatono'
 alias dptmp='dp && cd tmp'
 alias dptrain='dp && cd training'
@@ -53,18 +55,28 @@ alias dpgit='dp && cd github'
 alias dpnserv='dp && cd nodeservices'
 alias dpapp='dp && cd appplatform'
 alias dptest='dp && cd test'
+alias dptsel='dptest && cd selenium'
+alias dptsnode='dptsel && cd javascript/node/selenium-webdriver'
 
-alias dped='dpcweb && cd conspartneronbnodeweb'
-alias dpecom='dpcweb && cd conspartneronb-components'
+alias dped='dpcon && cd conspartneronbnodeweb'
+alias dpecom='dpcon && cd conspartneronb-components'
 alias dpecdata='dppart && cd conspartneronb-countrydata'
-alias dptes='dpcweb && cd consonbdnodeweb'
-alias dptcdata='dpcweb && cd onboarding-countrydata'
+alias dppfix='dppart && cd fixo'
+alias dppcal='dppart && cd cal-pretty-console'
+alias dptes='dpcon && cd consonbdnodeweb'
+alias dptcdata='dpcon && cd onboarding-countrydata'
 
 alias dprea='dp && cd react'
 alias dprcom='dprea && cd components'
 alias dprlib='dprea && cd libs'
 alias dprutil='dprea && cd utils'
 alias dprnode='dprea && cd nodeweb'
+
+alias dpkra='dp && cd kraken'
+alias dkkra='dpkra && cd kraken-js'
+alias dkdtools='dpkra && cd kraken-devtools'
+alias dkconfit='dpkra && cd confit'
+alias dklusca='dpkra && cd lusca'
 
 alias vpcon='dpcon && vim'
 alias vpcdata='dpcdata && vim'
@@ -189,13 +201,7 @@ alias dredevtl='drred && cd devtools/redux-devtools'
 
 # Node
 alias dnnode='dnode && cd node'
-alias dnkra='dnode && cd kraken'
 alias dnexp='dnode && cd express'
-
-alias dkkra='dnkra && cd kraken-js'
-alias dkdtools='dnkra && cd kraken-devtools'
-alias dkconfit='dnkra && cd confit'
-alias dklusca='dnkra && cd lusca'
 
 alias deexp='dnexp && cd express'
 
@@ -208,6 +214,13 @@ alias ctproj='ctags -R --exclude=.git --exclude=node_modules --exclude=test --ex
 
 # Node Util
 alias mochac='mocha --compilers coffee-script'
+
+# Selenium
+alias dsel='dptest && cd selenium'
+alias dselwd='dsel cd ./javascript/node/selenium-webdriver'
+
+alias sselhub='selenium-server -role hub'
+alias sselnode='selenium-server -role node -hub http://localhost:4444/grid/register'
 
 # Google Drive
 alias dgdr='cd ~/Google\ Drive'
@@ -314,6 +327,7 @@ alias r='rails'
 alias nd='node debug'
 alias gr='grunt'
 alias grbsync='grunt browsersync'
+alias grauto='grunt automation'
 alias gu='gulp'
 alias ru='rackup'
 alias bu='bundle'
