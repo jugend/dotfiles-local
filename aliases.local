@@ -1,5 +1,6 @@
 # Command
 alias git=hub
+alias hs=http-server
 
 # Directories
 alias dcodes='cd ~/codes'
@@ -35,6 +36,8 @@ alias dbooks='cd ~/codes/misc/books'
 alias ddoc='cd ~/codes/doc'
 alias dand='cd ~/codes/android'
 alias drea='cd ~/codes/react'
+alias dctmp='cd ~/codes/tmp'
+alias dkd='cd ~/codes/kd'
 
 # Paypal
 alias dp='cd ~/codes/paypal'
@@ -330,6 +333,7 @@ alias gr='grunt'
 alias grbrow='grunt browsersync'
 alias grau='grunt automation'
 alias graug='grunt automation --grep'
+alias graus='grunt automation --spec'
 alias gu='gulp'
 alias ru='rackup'
 alias bu='bundle'
@@ -431,3 +435,6 @@ alias fstop='flow stop'
 
 # Gist
 alias gstd='vim -c ":Gist 2a7db40268fa3a65faa9"'
+
+# Temp
+alias mgrep='nemoBaseDir=~/codes/paypal/consumerweb/conspartneronbnodeweb/test/functional/ mocha -t 200000 --watch test/functional/spec/**/*.js --grep'
