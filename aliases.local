@@ -1,6 +1,6 @@
 # Command
 alias git=hub
-alias hs=http-server
+alias hts=http-server
 
 # Directories
 alias dcodes='cd ~/codes'
@@ -37,7 +37,7 @@ alias ddoc='cd ~/codes/doc'
 alias dand='cd ~/codes/android'
 alias drea='cd ~/codes/react'
 alias dctmp='cd ~/codes/tmp'
-alias dkd='cd ~/codes/kd'
+alias dckd='cd ~/codes/kd'
 
 # Paypal
 alias dp='cd ~/codes/paypal'
@@ -50,7 +50,8 @@ alias dpcheck='dp && cd checkout'
 alias dpninfra='dp && cd nodeinfra'
 alias dpnode='dp && cd nodejs'
 alias dpnserv='dp && cd nodeservices'
-alias dphsiatono='dp && cd hsiatono'
+alias dpnop='dp && cd nodeops'
+alias dphsi='dp && cd hsiatono'
 alias dptmp='dp && cd tmp'
 alias dptrain='dp && cd training'
 alias dpcom='dp && cd compliance'
@@ -87,8 +88,6 @@ alias vpcdata='dpcdata && vim'
 alias vptes='dptes && vim'
 alias vptcdata='dptcdata && vim'
 
-alias gcodev='git checkout develop'
-alias gcomas='git checkout master'
 alias gpludev='git pull upstream develop'
 alias gplumas='git pull upstream master'
 alias gpodev='git push origin develop'
@@ -334,6 +333,7 @@ alias grbrow='grunt browsersync'
 alias grau='grunt automation'
 alias graug='grunt automation --grep'
 alias graus='grunt automation --spec'
+alias grau='grunt automation --spec'
 alias gu='gulp'
 alias ru='rackup'
 alias bu='bundle'

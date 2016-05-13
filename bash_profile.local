@@ -19,6 +19,9 @@ export PYTHONPATH=~/lib/python2.6/site-packages
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
+# Avn
+[[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
+
 # Node
 export NODE_PATH=$NODE_PATH:/usr/local/lib/jsctags/:$`npm root -g`
 export PATH=./node_modules/.bin:$HOME/node_modules/.bin:$PATH
