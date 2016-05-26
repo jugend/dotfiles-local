@@ -1,6 +1,6 @@
 # Command
 alias git=hub
-alias hts=http-server
+alias https=http-server
 
 # Directories
 alias dcodes='cd ~/codes'
@@ -37,7 +37,7 @@ alias ddoc='cd ~/codes/doc'
 alias dand='cd ~/codes/android'
 alias drea='cd ~/codes/react'
 alias dctmp='cd ~/codes/tmp'
-alias dckd='cd ~/codes/kd'
+alias dkd='cd ~/codes/kd'
 
 # Paypal
 alias dp='cd ~/codes/paypal'
@@ -62,11 +62,11 @@ alias dptest='dp && cd test'
 alias dptsel='dptest && cd selenium'
 alias dptsnode='dptsel && cd javascript/node/selenium-webdriver'
 
+alias dpfix='dphsi && cd fixo'
+alias dpnfix='dphsi && cd nemo-fixo'
 alias dped='dpcon && cd conspartneronbnodeweb'
 alias dpecom='dpcon && cd conspartneronb-components'
 alias dpecdata='dppart && cd conspartneronb-countrydata'
-alias dppfix='dppart && cd fixo'
-alias dppnfix='dppart && cd nemo-fixo'
 alias dppcal='dppart && cd cal-pretty-console'
 alias dptes='dpcon && cd consonbdnodeweb'
 alias dptcdata='dpcon && cd onboarding-countrydata'
@@ -183,24 +183,24 @@ alias drrea='drea && cd react'
 alias drflux='drea && cd flux'
 alias drweb='drea && cd webpack/webpack'
 alias drrak='drea && cd rakt'
-alias drred='drea && cd redux'
 alias drtest='drea && cd test'
 
 alias drnat='drea && cd react-native'
 alias drintl='drea && cd react-intl'
 
 alias drtrea='drtest && cd test-react'
-alias drtred='drtest && cd test-redux'
 alias drtweb='drtest && cd test-webpack'
 alias drtflux='drtest && cd test-flux'
 alias drtjest='drtest && cd test-jest'
 
 # Redux
-alias drered='drred && cd redux'
+alias dred='dcodes && cd redux'
+alias drered='dred && cd redux'
 alias dreboil='drred && cd boilerplate'
 alias dreapp='drred && cd apps'
 alias dredev='drred && cd devtools'
 alias dredevtl='drred && cd devtools/redux-devtools'
+alias dretest='drtest && cd test-redux'
 
 # Node
 alias dnnode='dnode && cd node'
@@ -235,7 +235,6 @@ alias ddkdp='cd ~/Dropbox/kursdesign/projects'
 alias ddsync='cd ~/Dropbox/Sync'
 
 # Kurs Design
-alias dkd='cd ~/projects/kursdesign'
 alias dkdp='cd ~/projects/kursdesign/kursprojects'
 alias dfunland='cd ~/projects/kursdesign/kursprojects/201103_funland'
 
