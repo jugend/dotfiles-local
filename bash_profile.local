@@ -41,5 +41,6 @@ export RUBYMOTION_ANDROID_SDK=~/.rubymotion-android/sdk
 
 # Auto start tmux
 if command -v tmux>/dev/null; then
-  [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
+  # [[ ! $TERM =~ tmux ]] && [ -z $TMUX ] && exec tmux
+  [[ ! $TERM =~ tmux ]] && [ -z $TMUX ] && tmux
 fi
