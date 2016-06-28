@@ -94,6 +94,7 @@ alias vptcdata='dptcdata && vim'
 alias gpludev='git pull upstream develop'
 alias gplumas='git pull upstream master'
 alias gpodev='git push origin develop'
+alias gpj='git push jugend'
 
 alias nmindex='nmon -w config -w controllers -w lib -w models -w routes index.js'
 alias ndindex='NODE_DEBUG=kraken/views,kraken/events,kraken/settings,kraken/bootstrap,kraken/middleware DEBUG=express:application,express:router,express:view nmindex'
