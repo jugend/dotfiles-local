@@ -1,9 +1,11 @@
 " Local settings
 
 " Truecolor support
-let &t_8f="\e[38;2;%ld;%ld;%ldm"
-let &t_8b="\e[48;2;%ld;%ld;%ldm"
-set termguicolors
+if !&diff
+  let &t_8f="\e[38;2;%ld;%ld;%ldm"
+  let &t_8b="\e[48;2;%ld;%ld;%ldm"
+  set termguicolors
+endif
 
 " Gist Notes
 noremap <leader>it :Gist 2a7db40268fa3a65faa9<cr>

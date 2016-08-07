@@ -16,6 +16,8 @@ alias djsapp='cd ~/codes/jsapp'
 alias dhtml='cd ~/codes/html'
 alias dobj='cd ~/codes/obj'
 alias doapp='cd ~/codes/objapp'
+alias dmos='cd ~/codes/macos'
+alias dios='cd ~/codes/ios'
 alias dswift='cd ~/codes/swift'
 alias dsapp='cd ~/codes/swiftapp'
 alias dnode='cd ~/codes/node'
@@ -46,7 +48,7 @@ alias dpconui='dp && cd consumerwebui'
 alias dppart='dp && cd partneronboarding'
 alias dpfront='dp && cd frontend'
 alias dpi18n='dp && cd i18n'
-alias dpcheck='dp && cd checkout'
+alias dpxo='dp && cd checkout'
 alias dpninfra='dp && cd nodeinfra'
 alias dpnode='dp && cd nodejs'
 alias dpnserv='dp && cd nodeservices'
@@ -60,6 +62,7 @@ alias dpnserv='dp && cd nodeservices'
 alias dpapp='dp && cd appplatform'
 alias dptest='dp && cd test'
 alias dpui='dp && cd uideploy'
+alias dptmp='dp && cd tmp'
 
 alias dptsel='dptest && cd selenium'
 alias dptsnode='dptsel && cd javascript/node/selenium-webdriver'
@@ -177,6 +180,7 @@ alias dntexpress='dnapp && cd express'
 alias drnative='dcodes && cd react-native'
 alias dnconnect='dnapp && cd node/connect'
 alias dntest='dnapp && cd test'
+alias dndebug='dnapp && cd debug'
 alias dnboil='dnapp && cd boilerplate'
 alias dnopen='dnapp && cd opensource'
 alias dnwskit='dnapp && cd google/web-starter-kit'
@@ -261,6 +265,10 @@ function grep_log() {
 function jpegquality() {
   identify -verbose $1 | grep Quality
 }
+
+# Airsonos
+alias ssonos='airsonos > /dev/null &'
+alias stsonos='pkf airsonos'
 
 # Genesis
 alias pmaintain='mv public/maintenance_bak.html public/maintenance.html'
