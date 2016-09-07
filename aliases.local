@@ -1,6 +1,7 @@
 # Command
 alias git=hub
 alias https=http-server
+alias ly=lynx
 
 # Directories
 alias dcodes='cd ~/codes'
@@ -41,6 +42,11 @@ alias drea='cd ~/codes/react'
 alias dctmp='cd ~/codes/tmp'
 alias dkd='cd ~/codes/kd'
 
+#NPM
+alias nrep='npmrepo'
+alias nrclone='npmrepoclone'
+alias nropen='npmrepoopen'
+
 # Paypal
 alias dp='cd ~/codes/paypal'
 alias dpcon='dp && cd consumerweb'
@@ -53,7 +59,7 @@ alias dpninfra='dp && cd nodeinfra'
 alias dpnode='dp && cd nodejs'
 alias dpnserv='dp && cd nodeservices'
 alias dpnop='dp && cd nodeops'
-alias dphsi='dp && cd hsiatono'
+alias dphs='dp && cd hsiatono'
 alias dptmp='dp && cd tmp'
 alias dptrain='dp && cd training'
 alias dpcom='dp && cd compliance'
@@ -62,6 +68,7 @@ alias dpnserv='dp && cd nodeservices'
 alias dpapp='dp && cd appplatform'
 alias dptest='dp && cd test'
 alias dpui='dp && cd uideploy'
+alias dpglob='dp && cd globalization'
 alias dptmp='dp && cd tmp'
 
 alias dptsel='dptest && cd selenium'
@@ -267,7 +274,7 @@ function jpegquality() {
 }
 
 # Airsonos
-alias ssonos='airsonos > /dev/null &'
+alias ssonos='nvm use 5 && airsonos > /dev/null &'
 alias stsonos='pkf airsonos'
 
 # Genesis
