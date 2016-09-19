@@ -44,8 +44,8 @@ alias dkd='cd ~/codes/kd'
 
 #NPM
 alias nrep='npmrepo'
-alias nrclone='npmrepoclone'
-alias nropen='npmrepoopen'
+alias nrepcl='npmrepoclone'
+alias nrepo='npmrepoopen'
 
 # Paypal
 alias dp='cd ~/codes/paypal'
@@ -53,6 +53,7 @@ alias dpcon='dp && cd consumerweb'
 alias dpconui='dp && cd consumerwebui'
 alias dppart='dp && cd partneronboarding'
 alias dpfront='dp && cd frontend'
+alias dprog='dp && cd dtrogueone'
 alias dpi18n='dp && cd i18n'
 alias dpxo='dp && cd checkout'
 alias dpninfra='dp && cd nodeinfra'
@@ -70,6 +71,7 @@ alias dptest='dp && cd test'
 alias dpui='dp && cd uideploy'
 alias dpglob='dp && cd globalization'
 alias dptmp='dp && cd tmp'
+alias dpnauth='dp && cd nodeauth'
 
 alias dptsel='dptest && cd selenium'
 alias dptsnode='dptsel && cd javascript/node/selenium-webdriver'
