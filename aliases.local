@@ -41,11 +41,15 @@ alias dand='cd ~/codes/android'
 alias drea='cd ~/codes/react'
 alias dctmp='cd ~/codes/tmp'
 alias dkd='cd ~/codes/kd'
+alias dlea='cd ~/codes/learn'
 
 #NPM
 alias nrep='npmrepo'
 alias nrepcl='npmrepoclone'
 alias nrepo='npmrepoopen'
+
+# Learn
+alias dlml='dlea && cd machine-learning'
 
 # Paypal
 alias dp='cd ~/codes/paypal'
