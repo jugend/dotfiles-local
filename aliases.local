@@ -1,7 +1,13 @@
 # Command
-alias git=hub
-alias https=http-server
-alias ly=lynx
+alias git='hub'
+alias https='http-server'
+alias ly='lynx'
+alias chromed='chromedriver'
+
+# React Native
+alias rn='react-native'
+alias rnios='rn run-ios'
+alias rnand='rn run-android'
 
 # Directories
 alias dcodes='cd ~/codes'
@@ -42,6 +48,12 @@ alias drea='cd ~/codes/react'
 alias dctmp='cd ~/codes/tmp'
 alias dkd='cd ~/codes/kd'
 alias dlea='cd ~/codes/learn'
+alias drn='cd ~/codes/react-native'
+
+# Github
+alias dgecs='dgit && cd amazon-ecs';
+alias dgfix='dgit && cd fixo';
+alias dgnfix='dgit && cd nemo-fixo';
 
 #NPM
 alias nrep='npmrepo'
@@ -76,6 +88,7 @@ alias dpui='dp && cd uideploy'
 alias dpglob='dp && cd globalization'
 alias dptmp='dp && cd tmp'
 alias dpnauth='dp && cd nodeauth'
+alias dpopen='dp && cd opensource'
 
 alias dptsel='dptest && cd selenium'
 alias dptsnode='dptsel && cd javascript/node/selenium-webdriver'
@@ -115,9 +128,8 @@ alias gpj='git push jugend'
 alias nmindex='nmon -w config -w controllers -w lib -w models -w routes index.js'
 alias ndindex='NODE_DEBUG=kraken/views,kraken/events,kraken/settings,kraken/bootstrap,kraken/middleware DEBUG=express:application,express:router,express:view nmindex'
 
-alias NODEDEV='NODE_ENV=dev'
-alias NODEDEVEL='NODE_ENV=development'
-alias NODEPROD='NODE_ENV=production'
+alias NPROD='NODE_ENV=production'
+alias NSTAGE='NODE_ENV=staging'
 
 # Yahoo
 alias dy='cd ~/codes/yahoo'
@@ -357,10 +369,10 @@ alias grbrow='grunt browsersync'
 alias grau='grunt automation'
 alias graug='grunt automation --grep'
 alias graus='grunt automation --spec'
-alias grau='grunt automation --spec'
 alias grausc='grunt automation --script'
-alias grauls='grunt automation:local --spec'
-alias graurs='grunt automation:release --spec'
+alias grausl='grunt automation:local --spec'
+alias grauss='grunt automation:stage --spec'
+alias grausr='grunt automation:release --spec'
 alias gu='gulp'
 alias ru='rackup'
 alias bu='bundle'
@@ -396,9 +408,6 @@ alias xclearmod='rm -rf ~/Library/Developer/Xcode/DerivedData/ModuleCache'
 # Google Drive
 alias dgd='cd ~/Documents/Google\ Drive'
 
-# SSH
-alias shbj='ssh www.bookjetty.com'
-
 # Rsync
 # alias rsmodules='rsync -rv user@hostname.com:src-path dest-path'
 
@@ -416,6 +425,7 @@ alias dhctest='dhtest && cd test-cocoapods'
 
 # Webpack
 alias wp='webpack'
+alias wpw='webpack -w'
 alias wpcolors='webpack --process --colors'
 alias wpwatch='webpack --process --colors --watch'
 alias wpconfig='webpack --config'
@@ -465,3 +475,6 @@ alias gstd='vim -c ":Gist 2a7db40268fa3a65faa9"'
 
 # Temp
 alias mgrep='nemoBaseDir=~/codes/paypal/consumerweb/conspartneronbnodeweb/test/functional/ mocha -t 200000 --watch test/functional/spec/**/*.js --grep'
+
+# Octave
+alias oct='octave'
