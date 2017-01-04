@@ -26,6 +26,7 @@ alias dobj='cd ~/codes/obj'
 alias doapp='cd ~/codes/objapp'
 alias dmos='cd ~/codes/macos'
 alias dios='cd ~/codes/ios'
+alias diapp='cd ~/codes/iosapp'
 alias dswift='cd ~/codes/swift'
 alias dsapp='cd ~/codes/swiftapp'
 alias dnode='cd ~/codes/node'
@@ -483,3 +484,22 @@ alias mgrep='nemoBaseDir=~/codes/paypal/consumerweb/conspartneronbnodeweb/test/f
 
 # Octave
 alias oct='octave'
+
+# Functions
+ppap-create-noncip() {
+  if [ $# -eq 0 ]; then
+    ppap account create | grep Account | awk -F ": " '{print $2}' | pbcopy && ppap rps set `pbpaste` pp.834 1
+  else
+    ppap account create --email-address $1 | grep Account | awk -F ": " '{print $2}' | pbcopy && ppap rps set `pbpaste` pp.834 1
+  fi
+
+  echo Non-CIP Account created: `pbpaste`
+  ppap account show `pbpaste`
+  ppap rps list `pbpaste`
+}
+
+ppap-create-cip() {
+  ppap-noncip-account $1
+  ppap cip `pbpaste`
+  echo Account CIP-ed: `pbpaste`
+}
