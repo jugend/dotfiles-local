@@ -4,11 +4,14 @@ alias https='http-server'
 alias ly='lynx'
 alias rs='react-scripts'
 alias chd='chromedriver'
+alias jsb='js-beautify'
 
 # React Native
 alias rn='react-native'
 alias rnios='rn run-ios'
 alias rnand='rn run-android'
+alias rnlios='rn log-ios'
+alias rnland='rn log-android'
 
 # Directories
 alias dcodes='cd ~/codes'
@@ -50,7 +53,10 @@ alias dre='cd ~/codes/react'
 alias dctmp='cd ~/codes/tmp'
 alias dkd='cd ~/codes/kd'
 alias dlea='cd ~/codes/learn'
+
 alias drn='cd ~/codes/react-native'
+alias drnrn='cd ~/codes/react-native/react-native'
+alias drntest='cd ~/codes/react-native/test'
 
 # Github
 alias dgecs='dgit && cd amazon-ecs';
@@ -68,11 +74,15 @@ alias dlml='dlea && cd machine-learning'
 # Paypal
 alias dp='cd ~/codes/paypal'
 alias dpcon='dp && cd consumerweb'
-alias dpconui='dp && cd consumerwebui'
+alias dpcmod='dp && cd consumerweb-modules'
+alias dpcui='dp && cd consumerwebui'
+alias dpcser='dp && cd consumerservices'
+alias dpcsnode='dp && cd consumerservices-nodeweb'
 alias dppart='dp && cd partneronboarding'
 alias dpfront='dp && cd frontend'
 alias dprog='dp && cd dtrogueone'
 alias dpi18n='dp && cd i18n'
+alias dpid='dp && cd identity'
 alias dpxo='dp && cd checkout'
 alias dpninfra='dp && cd nodeinfra'
 alias dpnode='dp && cd nodejs'
@@ -95,11 +105,13 @@ alias dpopen='dp && cd opensource'
 alias dptsel='dptest && cd selenium'
 alias dptsnode='dptsel && cd javascript/node/selenium-webdriver'
 
-alias dpfix='dphsi && cd fixo'
-alias dpnfix='dphsi && cd nemo-fixo'
+alias dpfix='dphs && cd fixo'
+alias dpnfix='dphs && cd nemo-fixo'
+alias dpdev='dphs && cd node-paypal-devtools'
 alias dped='dpcon && cd conspartneronbnodeweb'
 alias dpbb='dpcon && cd bankingbundlenodeweb'
-alias dphm='dpcon && cd heimdallrnodeweb'
+alias dp2p='dpcon && cd p2pnodeweb'
+alias dpheim='dpcon && cd heimdallrnodeweb'
 alias dpsa='dpnode && cd sample-app'
 alias dpecom='dpcon && cd conspartneronb-components'
 alias dpecdata='dppart && cd conspartneronb-countrydata'
@@ -107,6 +119,7 @@ alias dppcal='dppart && cd cal-pretty-console'
 alias dptes='dpcon && cd consonbdnodeweb'
 alias dptcdata='dpcon && cd onboarding-countrydata'
 alias dpres='dpui && cd resourcedeploy'
+alias dpwal='dpcon && cd walletexpnodeweb'
 
 alias dpre='dp && cd react'
 alias dprcom='dpre && cd components'
@@ -133,8 +146,9 @@ alias gpj='git push jugend'
 alias nmindex='nmon -w config -w controllers -w lib -w models -w routes index.js'
 alias ndindex='NODE_DEBUG=kraken/views,kraken/events,kraken/settings,kraken/bootstrap,kraken/middleware DEBUG=express:application,express:router,express:view nmindex'
 
-alias NPROD='NODE_ENV=production'
-alias NSTAGE='NODE_ENV=staging'
+alias nprod='NODE_ENV=production'
+alias nstage='NODE_ENV=staging'
+alias dscore="DEBUG_SERVICECORE=1"
 
 # Yahoo
 alias dy='cd ~/codes/yahoo'
@@ -217,7 +231,10 @@ alias dnopen='dnapp && cd opensource'
 alias dnwskit='dnapp && cd google/web-starter-kit'
 alias dnwebpack='dnapp && cd test/test-webpack'
 
+alias dnplay='dntest && cd playground'
+
 # React
+alias dretest='dre && cd test'
 alias drrea='drea && cd react'
 alias drflux='drea && cd flux'
 alias drweb='drea && cd webpack/webpack'
@@ -239,7 +256,6 @@ alias dreboil='drred && cd boilerplate'
 alias dreapp='drred && cd apps'
 alias dredev='drred && cd devtools'
 alias dredevtl='drred && cd devtools/redux-devtools'
-alias dretest='drtest && cd test-redux'
 
 # Node
 alias dnnode='dnode && cd node'
@@ -376,9 +392,9 @@ alias grau='grunt automation'
 alias graug='grunt automation --grep'
 alias graus='grunt automation --spec'
 alias grausc='grunt automation --script'
-alias grausl='grunt automation:local --spec'
+alias grauls='grunt automation:local --spec'
 alias grauss='grunt automation:stage --spec'
-alias grausr='grunt automation:release --spec'
+alias graurs='grunt automation:release --spec'
 alias gu='gulp'
 alias ru='rackup'
 alias bu='bundle'
@@ -460,12 +476,14 @@ alias rpaypal='repopaypal'
 
 function repogithub() {
   npm config set registry 'https://registry.npmjs.org'
+  yarn config set registry 'https://registry.npmjs.org'
   git config --global user.email 'herryanto@gmail.com'
   git config --global user.name 'Herryanto Siatono'
 }
 
 function repopaypal() {
   npm config set registry 'http://npm.paypal.com'
+  yarn config set registry 'http://npm.paypal.com'
   git config --global user.email 'hsiatono@paypal.com'
   git config --global user.name 'Herryanto Siatono'
 }
@@ -488,9 +506,9 @@ alias oct='octave'
 # Functions
 ppap-create-noncip() {
   if [ $# -eq 0 ]; then
-    ppap account create | grep Account | awk -F ": " '{print $2}' | pbcopy && ppap rps set `pbpaste` pp.834 1
+    ppap account create | grep Account | awk -F ": " '{print $2}' | pbcopy && ppap rps set `pbpaste` pp.11 1
   else
-    ppap account create --email-address $1 | grep Account | awk -F ": " '{print $2}' | pbcopy && ppap rps set `pbpaste` pp.834 1
+    ppap account create --email-address $1@paypal.com $2 $3 | grep Account | awk -F ": " '{print $2}' | pbcopy && ppap rps set `pbpaste` pp.11 1
   fi
 
   echo Non-CIP Account created: `pbpaste`
@@ -499,7 +517,38 @@ ppap-create-noncip() {
 }
 
 ppap-create-cip() {
-  ppap-noncip-account $1
+  ppap-create-noncip $1
   ppap cip `pbpaste`
   echo Account CIP-ed: `pbpaste`
+  ppap address `pbpaste`
 }
+
+ppap-rps-set() {
+  ppap rps set $1 pp.11 1
+  ppap rps set $1 pp.834 1
+  # ppap rps set $1 pp.872 1
+}
+
+ppap-account-show() {
+  ppap account show --by-email $1@paypal.com | pbcopy
+  pbpaste
+  echo '=================================='
+  pbpaste | grep Account | awk '{print $3}'  | xargs ppap address
+}
+
+ppap-account-an() {
+  ppap-account $1 | grep Account | awk '{print $3}'  | pbcopy
+  echo `pbpaste`
+}
+
+ppap-account-ean() {
+  ppap-account $1 | grep Encrypted | awk '{print $4}'  | pbcopy
+  echo `pbpaste`
+}
+
+alias ppcncip='ppap-create-noncip'
+alias ppccip='ppap-create-cip'
+alias pprset='ppap-rps-set'
+alias ppashow='ppap-account-show'
+alias ppanum='ppap-account-an'
+alias ppeanum='ppap-account-ean'

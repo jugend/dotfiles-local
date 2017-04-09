@@ -30,11 +30,14 @@ export PATH=./node_modules/.bin:$HOME/node_modules/.bin:$PATH
 [ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
 
 # Java
-export JAVA_HOME="/usr/libexec/java_home -v 1.7"
+export JAVA_HOME=`/usr/libexec/java_home`
 
 # Rvm
 export PATH="$PATH:$HOME/.rvm/bin"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+# Rust
+export PATH="$HOME/.cargo/bin:$PATH"
 
 # Ruby Motion
 export RUBYMOTION_ANDROID_SDK=~/.rubymotion-android/sdk
