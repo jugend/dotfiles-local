@@ -6,12 +6,26 @@ alias rs='react-scripts'
 alias chd='chromedriver'
 alias jsb='js-beautify'
 
+alias ng='nginx'
+alias ngst='nginx -s stop'
+alias ngr='nginx -s reload'
+alias ngc='nginx -c'
+
 # React Native
 alias rn='react-native'
 alias rnios='rn run-ios'
+alias rniossim='rn run-ios --simulator'
 alias rnand='rn run-android'
 alias rnlios='rn log-ios'
 alias rnland='rn log-android'
+alias rnreset='wdall && npmreset && nrsreset'
+
+# List devices
+alias rndevlist='xcrun simctl list devices'
+
+alias watchr='watchman watch-del-all'
+alias yinstr='rm -rf node_modules && yarn install'
+alias nrstartr='npm start -- --reset-cache'
 
 # Directories
 alias dcodes='cd ~/codes'
@@ -56,6 +70,7 @@ alias dlea='cd ~/codes/learn'
 
 alias drn='cd ~/codes/react-native'
 alias drnrn='cd ~/codes/react-native/react-native'
+alias drnex='cd ~/codes/react-native/examples'
 alias drntest='cd ~/codes/react-native/test'
 
 # Github
@@ -88,6 +103,7 @@ alias dpninfra='dp && cd nodeinfra'
 alias dpnode='dp && cd nodejs'
 alias dpnserv='dp && cd nodeservices'
 alias dpnop='dp && cd nodeops'
+alias dpndat='dp && cd nodedata'
 alias dphs='dp && cd hsiatono'
 alias dptmp='dp && cd tmp'
 alias dptrain='dp && cd training'
@@ -99,8 +115,10 @@ alias dptest='dp && cd test'
 alias dpui='dp && cd uideploy'
 alias dpglob='dp && cd globalization'
 alias dptmp='dp && cd tmp'
-alias dpnauth='dp && cd nodeauth'
+alias dpauth='dp && cd nodeauth'
 alias dpopen='dp && cd opensource'
+alias dpap='dp && cd apis'
+alias dpcomweb='dp && cd commonweb'
 
 alias dptsel='dptest && cd selenium'
 alias dptsnode='dptsel && cd javascript/node/selenium-webdriver'
@@ -120,6 +138,8 @@ alias dptes='dpcon && cd consonbdnodeweb'
 alias dptcdata='dpcon && cd onboarding-countrydata'
 alias dpres='dpui && cd resourcedeploy'
 alias dpwal='dpcon && cd walletexpnodeweb'
+alias dpmon='dpcon && cd moneynodeweb'
+alias dpdc='dpcon && cd debitcardnodeweb'
 
 alias dpre='dp && cd react'
 alias dprcom='dpre && cd components'
@@ -143,12 +163,14 @@ alias gplumas='git pull upstream master'
 alias gpodev='git push origin develop'
 alias gpj='git push jugend'
 
+alias dmoni='dscore nmoni'
 alias nmindex='nmon -w config -w controllers -w lib -w models -w routes index.js'
 alias ndindex='NODE_DEBUG=kraken/views,kraken/events,kraken/settings,kraken/bootstrap,kraken/middleware DEBUG=express:application,express:router,express:view nmindex'
 
 alias nprod='NODE_ENV=production'
 alias nstage='NODE_ENV=staging'
 alias dscore="DEBUG_SERVICECORE=1"
+alias dscore2="DEBUG_SERVICECORE=2"
 
 # Yahoo
 alias dy='cd ~/codes/yahoo'
@@ -395,6 +417,12 @@ alias grausc='grunt automation --script'
 alias grauls='grunt automation:local --spec'
 alias grauss='grunt automation:stage --spec'
 alias graurs='grunt automation:release --spec'
+alias gaut='grunt automation:local --keep-browser=true --watch=true'
+alias gauts='gaut --spec'
+alias gdaut='gaut --inspect=true'
+alias gdbaut='gdaut --debug-brk=true'
+alias gdauts='gdaut --spec'
+alias gdbauts='gdbaut --spec'
 alias gu='gulp'
 alias ru='rackup'
 alias bu='bundle'
@@ -414,7 +442,7 @@ alias vhttpd='dapache && sudo vi httpd.conf'
 alias vhttpv='dapache && sudo vi extra/httpd-vhosts.conf'
 
 # Application Support
-alias daps='cd ~/Library/Application\ Support'
+alias dapsup='cd ~/Library/Application\ Support'
 alias daxcode='cd ~/Library/Application\ Support/Developer/Shared/Xcode'
 alias dxplugin='daxcode && cd Plug-ins'
 
@@ -471,8 +499,8 @@ alias dhkra='dgithub && cd kraken'
 alias dtweb6='dtwebpack && cd babel6'
 
 # Git
-alias rgithub='repogithub'
-alias rpaypal='repopaypal'
+alias rgit='repogithub'
+alias rpay='repopaypal'
 
 function repogithub() {
   npm config set registry 'https://registry.npmjs.org'
@@ -508,7 +536,7 @@ ppap-create-noncip() {
   if [ $# -eq 0 ]; then
     ppap account create | grep Account | awk -F ": " '{print $2}' | pbcopy && ppap rps set `pbpaste` pp.11 1
   else
-    ppap account create --email-address $1@paypal.com $2 $3 | grep Account | awk -F ": " '{print $2}' | pbcopy && ppap rps set `pbpaste` pp.11 1
+    ppap account create --email-address $1@paypal.com $2 $3 $4 $5 | grep Account | awk -F ": " '{print $2}' | pbcopy && ppap rps set `pbpaste` pp.11 1
   fi
 
   echo Non-CIP Account created: `pbpaste`
@@ -517,7 +545,7 @@ ppap-create-noncip() {
 }
 
 ppap-create-cip() {
-  ppap-create-noncip $1
+  ppap-create-noncip $1 $2 $3 $4 $5 $6 $7
   ppap cip `pbpaste`
   echo Account CIP-ed: `pbpaste`
   ppap address `pbpaste`
