@@ -5,31 +5,43 @@ alias ly='lynx'
 alias rs='react-scripts'
 alias chd='chromedriver'
 alias jsb='js-beautify'
+alias sw='swift'
 
 alias ng='nginx'
 alias ngst='nginx -s stop'
 alias ngr='nginx -s reload'
 alias ngc='nginx -c'
 
+# React & Native
+alias crap='create-react-app'
+
 # React Native
 alias rn='react-native'
+alias rndevtools='react-devtools'
+alias rngup='react-native-git-upgrade'
+alias crnap='create-react-native-app'
 alias rnios='rn run-ios'
 alias rniossim='rn run-ios --simulator'
 alias rnand='rn run-android'
 alias rnlios='rn log-ios'
 alias rnland='rn log-android'
 alias rnreset='wdall && npmreset && nrsreset'
+alias rnclearcache='rmr ~/.rncache && rmr ios/build'
 
 # List devices
 alias rndevlist='xcrun simctl list devices'
 
-alias watchr='watchman watch-del-all'
-alias yinstr='rm -rf node_modules && yarn install'
-alias nrstartr='npm start -- --reset-cache'
+# React native clear cache
+alias wdelall='watchman watch-del-all'
+alias rmmodyi='rm -rf node_modules && yarn install'
+alias npmsresetcache='npm start -- --reset-cache'
+
+alias xcleanddata='rmr ~/Library/Developer/Xcode/DerivedData/'
 
 # Directories
-alias dcodes='cd ~/codes'
+alias dcod='cd ~/codes'
 
+alias dvid='cd ~/codes/videos'
 alias druby='cd ~/codes/ruby'
 alias dpapp='cd ~/codes/phpapp'
 alias dphp='cd ~/codes/php'
@@ -67,11 +79,13 @@ alias dre='cd ~/codes/react'
 alias dctmp='cd ~/codes/tmp'
 alias dkd='cd ~/codes/kd'
 alias dlea='cd ~/codes/learn'
+alias delap='cd ~/codes/elapp'
 
-alias drn='cd ~/codes/react-native'
-alias drnrn='cd ~/codes/react-native/react-native'
-alias drnex='cd ~/codes/react-native/examples'
-alias drntest='cd ~/codes/react-native/test'
+alias drn='cd ~/codes/rnative'
+alias drnrn='cd ~/codes/rnative/react-native'
+alias drnex='cd ~/codes/rnative/examples'
+
+alias drnap='cd ~/codes/rnativeapp'
 
 # Github
 alias dgecs='dgit && cd amazon-ecs';
@@ -88,6 +102,7 @@ alias dlml='dlea && cd machine-learning'
 
 # Paypal
 alias dp='cd ~/codes/paypal'
+alias dpa='dp && cd api'
 alias dpcon='dp && cd consumerweb'
 alias dpcmod='dp && cd consumerweb-modules'
 alias dpcui='dp && cd consumerwebui'
@@ -115,10 +130,13 @@ alias dptest='dp && cd test'
 alias dpui='dp && cd uideploy'
 alias dpglob='dp && cd globalization'
 alias dptmp='dp && cd tmp'
-alias dpauth='dp && cd nodeauth'
 alias dpopen='dp && cd opensource'
-alias dpap='dp && cd apis'
 alias dpcomweb='dp && cd commonweb'
+alias dpfunc='dp && cd functest'
+alias dpnauth='dp && cd nodeauth'
+alias dpnapp='dp && cd nodeapps'
+alias dptmp='dp && cd tmp'
+alias dpsp='dpgit && cd paypal-spotlight'
 
 alias dptsel='dptest && cd selenium'
 alias dptsnode='dptsel && cd javascript/node/selenium-webdriver'
@@ -128,9 +146,10 @@ alias dpnfix='dphs && cd nemo-fixo'
 alias dpdev='dphs && cd node-paypal-devtools'
 alias dped='dpcon && cd conspartneronbnodeweb'
 alias dpbb='dpcon && cd bankingbundlenodeweb'
+alias dpcfs='dpcon && cd cfsnodeweb'
 alias dp2p='dpcon && cd p2pnodeweb'
 alias dpheim='dpcon && cd heimdallrnodeweb'
-alias dpsa='dpnode && cd sample-app'
+alias dpsam='dpgit && cd sample-app'
 alias dpecom='dpcon && cd conspartneronb-components'
 alias dpecdata='dppart && cd conspartneronb-countrydata'
 alias dppcal='dppart && cd cal-pretty-console'
@@ -140,8 +159,12 @@ alias dpres='dpui && cd resourcedeploy'
 alias dpwal='dpcon && cd walletexpnodeweb'
 alias dpmon='dpcon && cd moneynodeweb'
 alias dpdc='dpcon && cd debitcardnodeweb'
+alias dpauth='dpid && cd authnodeweb'
+alias dpbp='dpcon && cd billpaynodeweb'
+alias dpabp='dpa && cd billing.BillManagementSpecification'
 
 alias dpre='dp && cd react'
+alias dpred='dp && cd react/redux'
 alias dprcom='dpre && cd components'
 alias dprlib='dpre && cd libs'
 alias dprutil='dpre && cd utils'
@@ -163,7 +186,7 @@ alias gplumas='git pull upstream master'
 alias gpodev='git push origin develop'
 alias gpj='git push jugend'
 
-alias dmoni='dscore nmoni'
+alias dnmoni='dscore nmoni'
 alias nmindex='nmon -w config -w controllers -w lib -w models -w routes index.js'
 alias ndindex='NODE_DEBUG=kraken/views,kraken/events,kraken/settings,kraken/bootstrap,kraken/middleware DEBUG=express:application,express:router,express:view nmindex'
 
@@ -171,6 +194,9 @@ alias nprod='NODE_ENV=production'
 alias nstage='NODE_ENV=staging'
 alias dscore="DEBUG_SERVICECORE=1"
 alias dscore2="DEBUG_SERVICECORE=2"
+
+alias ngpay='nginx -c ~/codes/paypal/github/devtools/nginx/nginx.dev.conf'
+alias ngbb='nginx -c ~/codes/paypal/consumerweb/bankingbundlenodeweb/nginx.dev.conf'
 
 # Yahoo
 alias dy='cd ~/codes/yahoo'
@@ -243,7 +269,7 @@ alias dnotes='cd ~/codes/misc/notes'
 # Node App
 alias dnlives='dnapp && cd peepcode/livestats'
 alias dntexpress='dnapp && cd express'
-alias drnative='dcodes && cd react-native'
+alias drnative='dcod && cd react-native'
 alias dnconnect='dnapp && cd node/connect'
 alias dntest='dnapp && cd test'
 alias dntm='dnapp && cd tmp'
@@ -254,6 +280,9 @@ alias dnwskit='dnapp && cd google/web-starter-kit'
 alias dnwebpack='dnapp && cd test/test-webpack'
 
 alias dnplay='dntest && cd playground'
+
+# Babel
+alias dbab='dnode && cd babel'
 
 # React
 alias dretest='dre && cd test'
@@ -272,7 +301,7 @@ alias drtflux='drtest && cd test-flux'
 alias drtjest='drtest && cd test-jest'
 
 # Redux
-alias dred='dcodes && cd redux'
+alias dred='dcod && cd redux'
 alias drered='dred && cd redux'
 alias dreboil='drred && cd boilerplate'
 alias dreapp='drred && cd apps'
@@ -409,20 +438,22 @@ alias ogens='genstrings ./Classes/*.m'
 alias r='rails'
 alias nd='node debug'
 alias gr='grunt'
-alias grbrow='grunt browsersync'
-alias grau='grunt automation'
-alias graug='grunt automation --grep'
-alias graus='grunt automation --spec'
-alias grausc='grunt automation --script'
-alias grauls='grunt automation:local --spec'
-alias grauss='grunt automation:stage --spec'
-alias graurs='grunt automation:release --spec'
-alias gaut='grunt automation:local --keep-browser=true --watch=true'
-alias gauts='gaut --spec'
-alias gdaut='gaut --inspect=true'
-alias gdbaut='gdaut --debug-brk=true'
-alias gdauts='gdaut --spec'
-alias gdbauts='gdbaut --spec'
+alias grtest='grunt test'
+alias grlint='grunt lint'
+alias grbuild='grunt build'
+
+alias gaut='grunt automation'
+alias gautg='grunt automation --grep'
+alias gauts='grunt automation --spec'
+alias gautsdb='grunt automation --debug=true --debug-brk=true --spec'
+alias gautsc='grunt automation --script'
+alias gautloc='grunt automation:localnginx --keep-browser=true'
+alias gautls='gautloc --parallel=true --spec'
+alias gautlws='gautloc --watch=true --spec'
+alias gautdbs='gautdb --spec'
+alias gautrels='grunt automation --stage bankingbundlenodeweb37133 --keep-browser=true --spec'
+alias gautdevs='grunt automation --stage bankingbundlenodeweb74669 --keep-browser=true --spec'
+
 alias gu='gulp'
 alias ru='rackup'
 alias bu='bundle'
@@ -496,6 +527,7 @@ alias vkpriv='sudo vi ~/Library/Application\ Support/Karabiner/private.xml'
 # Temporary Shortcuts
 alias dntkra='dntest && cd test-kraken'
 alias dhkra='dgithub && cd kraken'
+alias dplc='dpgit && cd lendingcirclenodeweb'
 alias dtweb6='dtwebpack && cd babel6'
 
 # Git
@@ -510,8 +542,8 @@ function repogithub() {
 }
 
 function repopaypal() {
-  npm config set registry 'http://npm.paypal.com'
-  yarn config set registry 'http://npm.paypal.com'
+  npm config set registry 'https://npm.paypal.com'
+  yarn config set registry 'https://npm.paypal.com'
   git config --global user.email 'hsiatono@paypal.com'
   git config --global user.name 'Herryanto Siatono'
 }
@@ -547,8 +579,8 @@ ppap-create-noncip() {
 ppap-create-cip() {
   ppap-create-noncip $1 $2 $3 $4 $5 $6 $7
   ppap cip `pbpaste`
-  echo Account CIP-ed: `pbpaste`
   ppap address `pbpaste`
+  echo Account CIP-ed: `pbpaste`
 }
 
 ppap-rps-set() {

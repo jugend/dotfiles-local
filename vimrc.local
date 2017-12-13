@@ -1,4 +1,9 @@
 " Local settings
+nnoremap <leader>eco :e config/config.json<cr>
+nnoremap <leader>ede :e config/development.json<cr>
+nnoremap <leader>est :e config/staging.json<cr>
+nnoremap <leader>eap :e config/appConfig.json<cr>
+nnoremap <leader>ewp :e webpack.config.js<cr>
 
 " Truecolor support
 if !&diff
