@@ -82,7 +82,7 @@ alias ddoc='cd ~/codes/doc'
 alias dand='cd ~/codes/android'
 alias dre='cd ~/codes/react'
 alias dctmp='cd ~/codes/tmp'
-alias dkd='cd ~/codes/kd'
+alias dkde='cd ~/codes/kd'
 alias dlea='cd ~/codes/learn'
 alias delap='cd ~/codes/elapp'
 
@@ -101,6 +101,13 @@ alias dgnfix='dgit && cd nemo-fixo';
 alias nrep='npmrepo'
 alias nrepcl='npmrepoclone'
 alias nrepo='npmrepoopen'
+
+alias nrsb='npm run storybook'
+alias nrtw='npm run test:watch'
+alias nrtdw='npm run test-watch'
+alias nrd='npm run dev'
+alias nrdeb='npm run debug'
+alias nrins='npm run inspect'
 
 # Learn
 alias dlml='dlea && cd machine-learning'
@@ -143,6 +150,11 @@ alias dpnapp='dp && cd nodeapps'
 alias dptmp='dp && cd tmp'
 alias dpsp='dpgit && cd paypal-spotlight'
 alias dpcx='dp && cd cxpweb'
+alias dpcxh='dpcx && cd cxpw-herobanner-widget'
+alias dpcxb='dpcx && cd cxpw-balance-widget'
+alias dpcxa='dpcx && cd cxpw-acorns-widget'
+alias dpcxg='dpcx && cd cxpw-goals-widget'
+alias dpcxcw='dpcx && cd cwpattern-lib-paypal'
 
 alias dptsel='dptest && cd selenium'
 alias dptsnode='dptsel && cd javascript/node/selenium-webdriver'
@@ -165,6 +177,7 @@ alias dpres='dpui && cd resourcedeploy'
 alias dpwal='dpcon && cd walletexpnodeweb'
 alias dpsum='dpcon && cd summarynodeweb'
 alias dpsumw='dpcon && cd summarynodeweb.wiki'
+alias dpset='dpcon && cd settingsnodeweb'
 alias dpmon='dpcon && cd moneynodeweb'
 alias dpmonw='dpcon && cd moneynodeweb.wiki'
 alias dpdc='dpcon && cd debitcardnodeweb'
@@ -207,6 +220,8 @@ alias nprod='NODE_ENV=production'
 alias nstage='NODE_ENV=staging'
 alias dscore="DEBUG_SERVICECORE=1"
 alias dscore2="DEBUG_SERVICECORE=2"
+alias topnocache="CACHE_TOPOS=false"
+alias logsc="LOG_SC=1"
 
 alias ngpay='nginx -c ~/codes/paypal/github/devtools/nginx/nginx.dev.conf'
 alias ngbb='nginx -c ~/codes/paypal/consumerweb/bankingbundlenodeweb/nginx.dev.conf'
@@ -441,6 +456,7 @@ alias vsquid='sudo vi /usr/local/Cellar/squid/3.1.9/etc/squid.conf'
 alias vvhost='sudo vi /etc/apache2/extra/httpd-vhosts.conf'
 alias vhttpd='sudo vi /etc/apache2/httpd.conf'
 alias vats='sudo vi /home/y/conf/ats_header_rewrite/globalmedia_esi.conf'
+alias vtop='vi node_modules/topos/toposcache.json'
 
 alias iprenew='sudo ifconfig en0 down;sudo ifconfig en0 mtu 1500 up'
 
@@ -565,7 +581,7 @@ function repopaypal() {
 }
 
 # Flow
-alias f='flow'
+alias fl='flow'
 alias fcheck='flow check'
 alias fchecka='flow check --all'
 alias fstop='flow stop'
@@ -628,3 +644,67 @@ alias pprset='ppap-rps-set'
 alias ppashow='ppap-account-show'
 alias ppanum='ppap-account-an'
 alias ppeanum='ppap-account-ean'
+
+# Surge
+sgp() {
+  surge . $1.surge.sh
+}
+
+sgt() {
+  surge teardown $1.surge.sh
+}
+
+# docker
+alias d='docker'
+alias dc='d container'
+alias dcins='dc inspect'
+alias dex='d exec -it'
+alias dhe='d help'
+alias dim='d image'
+alias dimls='d image ls'
+alias dimlsa='d image ls -a'
+alias dcls='d ps'
+alias dclsa='d ps -a'
+alias dlog='d logs'
+alias dlogf='d logs -f'
+alias dn='d node'
+alias dnls='d node ls'
+alias dnet='d network'
+alias dnetls='d network ls'
+alias dport='d port'
+alias dpull='d pull'
+alias dr='d run'
+alias drd='d run -d'
+alias drdp='d run -d -P'
+alias drit='d run -it'
+alias drrm='d run --rm'
+alias drm='d rm'
+alias drmf='d rm -f'
+alias ds='d service'
+alias dsls='d service ls'
+alias dst='d stop'
+alias dv='d volume'
+alias dvls='d volume ls'
+
+alias dal='d run -it --rm alpine'
+alias dbus='d run -it --rm busybox'
+
+# docker-compose
+alias dk='docker-compose'
+alias dku='dk up'
+alias dkd='dk down'
+alias dkps='dk ps'
+alias dkt='dk top'
+
+# docker-machine
+alias dm='docker-machine'
+alias dmc='dm create --driver virtualbox'
+alias dmls='dm ls'
+alias dme='dm env'              # display env vars
+alias dmeset='dmenvset'         # export env vars
+alias dmip='dm ip'              # docker machine ip
+
+# Kubernetes
+alias mk='minikube'
+alias kb='kubectl'
+alias ko='kops'
