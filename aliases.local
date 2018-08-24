@@ -14,6 +14,8 @@ alias ngst='nginx -s stop'
 alias ngr='nginx -s reload'
 alias ngc='nginx -c'
 
+alias npmo='npmopen'
+
 # React & Native
 alias crap='create-react-app'
 
@@ -113,6 +115,8 @@ alias nrins='npm run inspect'
 alias dlml='dlea && cd machine-learning'
 
 # Paypal
+alias pps='paypal-scripts'
+
 alias dp='cd ~/codes/paypal'
 alias dpa='dp && cd api'
 alias dpcon='dp && cd consumerweb'
@@ -120,6 +124,7 @@ alias dpcmod='dp && cd consumerweb-modules'
 alias dpcui='dp && cd consumerwebui'
 alias dpcser='dp && cd consumerservices'
 alias dpcsnode='dp && cd consumerservices-nodeweb'
+alias dpcust='dp && cd customers'
 alias dppart='dp && cd partneronboarding'
 alias dpfront='dp && cd frontend'
 alias dprog='dp && cd dtrogueone'
@@ -136,6 +141,7 @@ alias dptmp='dp && cd tmp'
 alias dptrain='dp && cd training'
 alias dpcom='dp && cd compliance'
 alias dpgit='dp && cd github'
+alias dpdev='dp && cd github/devtools'
 alias dpnserv='dp && cd nodeservices'
 alias dpapp='dp && cd appplatform'
 alias dptest='dp && cd test'
@@ -156,13 +162,13 @@ alias dpcxb='dpcx && cd cxpw-balance-widget'
 alias dpcxa='dpcx && cd cxpw-acorns-widget'
 alias dpcxg='dpcx && cd cxpw-goals-widget'
 alias dpcxcw='dpcx && cd cwpattern-lib-paypal'
+alias dpkep='dpcust && cd kepler'
 
 alias dptsel='dptest && cd selenium'
 alias dptsnode='dptsel && cd javascript/node/selenium-webdriver'
 
 alias dpfix='dphs && cd fixo'
 alias dpnfix='dphs && cd nemo-fixo'
-alias dpdev='dphs && cd node-paypal-devtools'
 alias dped='dpcon && cd conspartneronbnodeweb'
 alias dpbb='dpcon && cd bankingbundlenodeweb'
 alias dpcfs='dpcon && cd cfsnodeweb'
@@ -711,3 +717,26 @@ alias dmip='dm ip'              # docker machine ip
 alias k='kubectl'
 alias m='minikube'
 alias ko='kops'
+
+# Jupyter
+alias jup='jupyter'
+alias jupn='jup notebook'
+alias jupq='jup qtconsole'
+alias jupc='jup console'
+
+# Python
+alias ipy='ipython'
+
+# Python - Anaconda
+alias dcon='cd /usr/local/anaconda3'
+alias dconb='cd /usr/local/anaconda3/bin'
+alias con='/usr/local/anaconda3/bin/conda'
+alias soac='dconb && source activate'
+alias sode='dconb && source dactivate'
+
+alias conbase='soac base'
+
+# Cheat sheet
+alias ch='cht.sh'
+alias chs='ch --shell'
+
