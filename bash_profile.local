@@ -111,3 +111,6 @@ elif type compctl &>/dev/null; then
   compctl -K _npm_completion npm
 fi
 ###-end-npm-completion-###
+
+export SPARK_LOCAL_IP=127.0.0.1
+export SPARK_HOME=~/codes/paypal/hadoop/test-spark/spark-2.4.0-bin-hadoop2.7
