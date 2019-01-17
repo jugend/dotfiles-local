@@ -42,8 +42,9 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # Ruby Motion
 export RUBYMOTION_ANDROID_SDK=~/.rubymotion-android/sdk
 
-# Pipenv
-eval "$(pipenv --completion)"
+# Python
+[ -x "$(command -v pip)" ] && eval "$(pip completion --bash)"
+[ -x "$(command -v pipenv)" ] && eval "$(pipenv --completion)"
 
 # Auto start tmux
 if command -v tmux>/dev/null; then
