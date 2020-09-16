@@ -1,6 +1,6 @@
 # Command
 alias git='hub'
-alias hts='http-server'
+alias https='http-server'
 alias ly='lynx'
 alias rs='react-scripts'
 alias chd='chromedriver'
@@ -8,6 +8,8 @@ alias jsb='js-beautify'
 alias sw='swift'
 alias el='electron'
 alias elp='electron-packager'
+alias sm='source-map'
+alias smr='source-map resolve'
 
 alias ng='nginx'
 alias ngst='nginx -s stop'
@@ -46,9 +48,10 @@ alias npmsresetcache='npm start -- --reset-cache'
 alias rmtopos='rm node_modules/topos/toposcache.json'
 
 alias xcleanddata='rmr ~/Library/Developer/Xcode/DerivedData/'
+alias rmdoc='rmr .docz; rmr client/.docz'
 alias rmnmod='rmr node_modules'
 alias rmnmoda='rmr node_modules && rmr client/node_modules && rmr server/node_modules'
-alias rmrcache='rmr node_modules/.cache && rmr client/node_modules/.cache && rmr server/node_modules/.cache'
+alias rmcache='rmr node_modules/.cache && rmr client/node_modules/.cache && rmr server/node_modules/.cache'
 
 # Directories
 alias dcod='cd ~/codes'
@@ -102,10 +105,14 @@ alias drnex='cd ~/codes/rnative/examples'
 
 alias drnap='cd ~/codes/rnativeapp'
 
-alias dcl='cd client'
-alias dsr='cd server'
-alias drcl='cd ../client'
-alias drsr='cd ../server'
+alias dnod='cd node_modules'
+alias dcli='cd client'
+alias dclid='cd client/dist'
+alias dclin='cd client/node_modules'
+alias dser='cd server'
+alias dsern='cd server/node_modules'
+alias ..ser='cd ../server'
+alias ..cli='cd ../client'
 
 # Github
 alias dgecs='dgit && cd amazon-ecs';
@@ -114,7 +121,9 @@ alias dgnfix='dgit && cd nemo-fixo';
 
 # Docz
 alias ddev='docz dev'
+alias ddevd='ddev --debug'
 alias dbuild='docz build'
+alias dshare='docz share'
 
 #NPM
 alias nrep='npmrepo'
@@ -123,21 +132,51 @@ alias nrepo='npmrepoopen'
 
 alias nrsb='npm run storybook'
 alias nrtw='npm run test:watch'
+alias nrtn='npm run test:nowatch'
 alias nrtdw='npm run test-watch'
-alias nrd='npm run dev'
-alias nrdd='npm run dev:debug'
+alias nrtc='npm run test:console'
+alias nrtf='npm run test:functional'
+alias nrth='npm run test:functional:headless'
+alias nrtk='npm run test:functional:keepbrowser'
+alias nrtd='npm run test:functional:dev'
+alias nrtdeb='npm run test:functional:debug'
+
+alias nrtfl='bul nrtf'
+alias nrthl='bul nrth'
+alias nrtkl='bul nrtk'
+alias nrtdl='bul nrtd'
+alias nrtfg='bul nrtf -- --grep '
+alias nrthg='bul nrth -- --grep '
+alias nrtkg='bul nrtk -- --grep '
+alias nrtdg='bul nrtd -- --grep '
+alias nrtdebl='bul nrtdeb'
+
+alias bul='BASE_URL=https://localhost.paypal.com:8443'
+alias kbr='KEEP_BROWSER=true'
+
+alias nrd='kdev; npm run dev'
+alias nrdv='kdev; npm run dev:verbose'
+alias nrdd='kdev; npm run dev:debug'
 alias nrds='npm run dev:server'
 alias nrdsv='npm run dev:server:verbose'
 alias nrdc='npm run dev:client'
 alias nrdsh='npm run dev:shared'
-alias nrdv='npm run dev:verbose'
-alias nrdeb='npm run debug'
-alias nrins='npm run inspect'
-alias nrv='npm run validate'
+
+alias nrdocd='npm run docs:dev'
+alias nrdocb='npm run docs:build'
 alias nrdocd='npm run docs:dev'
 alias nrdocb='npm run docs:build'
 alias nrdocp='npm run docs:publish'
-alias nrdpup='npm run docs:publish -- --remote upstream'
+alias nrdocpu='npm run docs:publish:upstream'
+
+alias nrs='npm run start'
+alias nrsd='kdev;84 npm run start:dev'
+alias nrsd5='kdev;85 npm run start:dev'
+alias nrsv='kdev;84 npm run start:verbose'
+
+alias nrdeb='npm run debug'
+alias nrins='npm run inspect'
+alias nrv='npm run validate'
 alias nrdt='npm run docs:toc'
 alias nrgh='npm run gh-pages'
 alias nrv='npm run validate'
@@ -154,24 +193,39 @@ alias dlml='dlea && cd machine-learning'
 alias pps='paypal-scripts'
 alias dbpps='DEBUG=paypal-scripts:*'
 alias kdev='kport 8000; kport 9229'
+alias kssl='kport 8443'
 alias kins='kport 9229'
+alias agp='agg package.json'
 
 alias dp='cd ~/codes/paypal'
-alias dpa='dp && cd api'
-alias dpas='dp && cd api-specs'
+alias dpauth='dp && cd auth'
+alias dpspec='dp && cd specs'
+alias dptrack='dp && cd tracking'
 alias dpacfs='dpa && cd cfscard'
 alias dpabb='dpa && cd bankingbundle'
+alias dpadp='dpa && cd billing.DirectedPaymenttsSpecification'
 alias dpad='dpa && cd adroit'
 alias dpcon='dp && cd consumerweb'
 alias dpco='dp && cd checkout'
 alias dpap='dpcon && cd autopaynodeweb'
+alias dpapo='dpcon && cd autopaynodeweb-old'
+alias dpap2='dpcon && cd autopaynodeweb-3ds2'
 alias dpconui='dp && cd consumerweb-ui'
+alias dpgq='dp && cd gql'
+alias dpgqt='dp && cd gql-tools'
+alias dpgqp='dpgqt && cd playground'
+alias dpgqa='dpgqt && cd apollo'
 alias dpcfs='dp && cd cfsweb'
 alias dpcmod='dp && cd consumerweb-modules'
 alias dpcui='dp && cd consumerwebui'
 alias dpcser='dp && cd consumerservices'
 alias dpcsnode='dp && cd consumerservices-nodeweb'
 alias dpcust='dp && cd customers'
+alias dpmer='dp && cd merchant'
+alias dpserv='dp && cd services'
+alias dpdp='dpgq && cd dpgatewaynodeserv'
+alias dpdpp='dpgq && cd dpgatewaynodeserv-payments'
+alias dpdpb='dpgq && cd dpgatewaynodeserv-bp'
 alias dpf0='dp && cd f0'
 alias dppart='dp && cd partneronboarding'
 alias dpfront='dp && cd frontend'
@@ -181,12 +235,13 @@ alias dpgr='dp && cd graphql'
 alias dprog='dp && cd dtrogueone'
 alias dpi18n='dp && cd i18n'
 alias dpid='dp && cd identity'
+alias dpintl='dp && cd intl'
 alias dpxo='dp && cd checkout'
-alias dpninfra='dp && cd nodeinfra'
+alias dpinfra='dp && cd nodeinfra'
 alias dpnode='dp && cd nodejs'
 alias dpnserv='dp && cd nodeservices'
 alias dpnop='dp && cd nodeops'
-alias dpana='dp && cd analytics'
+alias dpan='dp && cd analytics'
 alias dphs='dp && cd hsiatono'
 alias dptmp='dp && cd tmp'
 alias dptrain='dp && cd training'
@@ -198,9 +253,9 @@ alias dpdevmon='dpdevn && cd moneynode'
 alias dpnserv='dp && cd nodeservices'
 alias dpapp='dp && cd appplatform'
 alias dptest='dp && cd test'
-alias dpui='dp && cd paypalui'
-alias dpure='dpui && cd pp-react'
-alias dpuvx='dpui && cd pp-vx'
+alias dpui='dpre && cd ui'
+alias dppre='dpui && cd pp-react'
+alias dpvx='dpui && cd pp-vx'
 alias dpglob='dp && cd globalization'
 alias dptmp='dp && cd tmp'
 alias dpopen='dp && cd opensource'
@@ -211,9 +266,10 @@ alias dpnauth='dp && cd nodeauth'
 alias dpnap='dp && cd nodeapps'
 alias dptmp='dp && cd tmp'
 alias dppi='dpgit && cd paypal-ignite'
-alias dpspn='dpgit && cd spotlightbarnodeweb'
+alias dpspot='dpgit && cd spotlightbarnodeweb'
 alias dpcx='dp && cd cxpweb'
-alias dpspec='dp && cd specs'
+alias dpsp='dp && cd specs'
+alias dpdps='dpsp && cd graphql.billing.DirectedPaymentsAPISepcification'
 alias dpcxh='dpcx && cd cxpw-herobanner-widget'
 alias dpcxb='dpcx && cd cxpw-balance-widget'
 alias dpcxa='dpcx && cd cxpw-acorns-widget'
@@ -222,18 +278,26 @@ alias dpcxcw='dpcx && cd cwpattern-lib-paypal'
 alias dpkep='dpcust && cd kepler'
 alias dppui='dp && cd paypalui'
 alias dphad='dp && cd hadoop'
-alias dp3ds='dp && cd 3ds2'
+alias dp3d='dp && cd 3ds2'
 
 alias dptsel='dptest && cd selenium'
 alias dptsnode='dptsel && cd javascript/node/selenium-webdriver'
 
+# Specs
+alias dsdm='dpspec && cd billing.DirectedPaymentsSpecification'
+alias dsdp='dpspec && cd graphql.billing.DirectedPaymentsAPISepcification'
+
+# Consumer nodewebs
 alias dpfix='dphs && cd fixo'
 alias dpnfix='dphs && cd nemo-fixo'
 alias dped='dpcon && cd conspartneronbnodeweb'
 alias dpbb='dpcon && cd bankingbundlenodeweb'
+alias dpdn='dpcon && cd dpnodeweb'
+alias dpdnt='dpcon && cd dpnodeweb-test'
+alias dpbl='dpgq && cd billingnodeserv'
 alias dpmp='dpcon && cd cfsnodeweb'
 alias dpcd='dpcon && cd compliancedashboardweb'
-alias dpucs='dpcfs && cd ucsnodeweb'
+alias dpucs='dpcon && cd ucsnodeweb'
 alias dpacon='dpcfs && cd pp-app-config'
 alias dpaui='dpcfs && cd pp-app-ui'
 alias dpacom='dpcfs && cd pp-app-common'
@@ -253,9 +317,9 @@ alias dpmon='dpcon && cd moneynodeweb'
 alias dpmon1='dpcon && cd moneynodeweb-3ds1'
 alias dpmon2='dpcon && cd moneynodeweb-3ds2'
 alias dpmonw='dpcon && cd moneynodeweb.wiki'
+alias dpsam='dpcon && cd pps-samples'
 alias dpmb='dpcon && cd moneyboxnodeweb'
 alias dpdc='dpcon && cd debitcardnodeweb'
-alias dpauth='dpid && cd authnodeweb'
 alias dpbp='dpcon && cd billpaynodeweb'
 alias dpabp='dpa && cd billing.BillManagementSpecification'
 
@@ -271,8 +335,9 @@ alias dprcom='dpre && cd components'
 alias dprlib='dpre && cd libs'
 alias dprutil='dpre && cd utils'
 alias dprnode='dpre && cd nodeweb'
+alias dpdoc='dpre && cd docs/docz2'
 
-alias dpkra='dp && cd kraken'
+alias dpkra='dpgit && cd kraken'
 alias dkkra='dpkra && cd kraken-js'
 alias dkdtools='dpkra && cd kraken-devtools'
 alias dkconfit='dpkra && cd confit'
@@ -293,6 +358,7 @@ alias nmindex='nmon -w config -w controllers -w lib -w models -w routes index.js
 alias ndindex='NODE_DEBUG=kraken/views,kraken/events,kraken/settings,kraken/bootstrap,kraken/middleware DEBUG=express:application,express:router,express:view nmindex'
 
 # Environment variables
+alias ndev='NODE_ENV=development'
 alias nprod='NODE_ENV=production'
 alias nstage='NODE_ENV=staging'
 alias dscore="DEBUG_SERVICECORE=1"
@@ -468,6 +534,8 @@ alias tslowq='tail -f -n 1000 /var/log/mysql/mysql-slow.log'
 alias tyts='tail -f /home/y/logs/yts/mon.log'
 alias tats='tail -f /home/y/logs/trafficserver/mon.log'
 alias tford='tail -f /home/y/logs/yford.log'
+alias tnge='tail -f -n 500 /usr/local/var/log/nginx/error.log'
+alias tnga='tail -f -n 500 /usr/local/var/log/nginx/access.log'
 alias tnohup='tf nohup.out'
 
 function grep_log() {
@@ -666,14 +734,14 @@ alias dtweb6='dtwebpack && cd babel6'
 alias rgit='repogithub'
 alias rpay='repopaypal'
 
-function repogithub() {
+function repogit() {
   npm config set registry 'https://registry.npmjs.org'
   # yarn config set registry 'https://registry.npmjs.org'
   git config --global user.email 'herryanto@gmail.com'
   git config --global user.name 'Herryanto Siatono'
 }
 
-function repopaypal() {
+function repopp() {
   npm config set registry 'https://npm.paypal.com'
   # yarn config set registry 'https://npm.paypal.com'
   git config --global user.email 'hsiatono@paypal.com'
@@ -853,3 +921,72 @@ alias gat='gatsby'
 
 # System policy - Issue for electron, running apple script
 alias upsyspol='tccutil reset AppleEvents; tccutil reset SystemPolicyAllFiles'
+
+# PP testenv
+alias te='testenv'
+alias telog='te login'
+alias tec='te create'
+alias tea='te app'
+alias ted='te desc'
+alias teh='te help'
+alias tel='te list'
+alias tecl='te clone'
+alias tecp='te scp'
+alias tesp='te spec'
+alias tetr='te transfer'
+alias teup='te update'
+alias teal='tea list'
+alias tead='tea desc'
+alias tear='tea restart'
+alias tessh='te ssh'
+
+# View Aapplication log, teappd [env-name] [app-name]
+alias tead='te app desc'
+alias teah='te app help'
+alias teah='te app flex'
+alias teai='te app install'
+alias teau='te app uninstall'
+alias tear='te app restart'
+
+alias tete='te ttl extend'
+
+# Generate security context
+alias genc='gencontext -c -s'
+
+# web-cli
+alias webd='web deploy'
+alias webdprod='webd --production'
+
+# GQL Playground
+alias gqp='/Applications/GraphQL\ Playground.app/Contents/MacOS/GraphQL\ Playground --ignore-certificate-errors &> /dev/null'
+
+alias gqsl='graphql-schema-linter'
+
+# Run in /v1/schema
+alias dpgqlc='gqsl graphql/enums/*.graphql graphql/inputs/*.graphql graphql/types/funding_option/*.graphql graphql/types/mutation_responses/*.graphql graphql/types/payment_agreement/*.graphql graphql/types/payment_settings/*.graphql graphql/types/*.graphql graphql/types/payment_agreement/*.graphql common_components/v4/schema/graphql/*.graphql'
+
+alias testecho='echo helllllo'
+
+# Functions
+pdid() {
+  post "http://sretools02.qa.paypal.com/cgi-bin/decrypt_adv2.py?button=JSON&type=6" \
+    --data "id_list=$1"
+}
+
+peid() {
+  post "http://sretools02.qa.paypal.com/cgi-bin/decrypt_adv2.py?button=JSON&type=6&action=enc13" \
+    --data "id_list=$1"
+}
+
+pftoreport() {
+  echo $1
+  grep reportFile | awk '{print "test/functional/reports"$3}'  | xargs open
+}
+
+cuser() {
+  cd /Users/hsiatono/codes/paypal/consumerweb/dpnodeweb
+  output=$(HEADLESS=true nrtd -- --grep @createUser $1 2>&1)
+  echo "$output"
+  echo "$output" | grep created: |  awk '{print $5}' | sed 's/,$//' | pbcopy
+  cd -
+}
