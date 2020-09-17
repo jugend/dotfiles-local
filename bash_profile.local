@@ -25,7 +25,7 @@ source $(brew --prefix nvm)/nvm.sh
 
 # Node
 export NODE_PATH=$NODE_PATH:/usr/local/lib/jsctags/:$`npm root -g`
-export PATH=./node_modules/.bin:$HOME/node_modules/.bin:$PATH
+export PATH=$PATH:$HOME/node_modules/.bin:./node_modules/.bin
 
 # Travis
 [ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
@@ -122,6 +122,6 @@ export SPARK_HOME=~/codes/paypal/hadoop/test-spark/spark-2.4.0-bin-hadoop2.7
 export CXXFLAGS="-mmacosx-version-min=10.9"
 export LDFLAGS="-mmacosx-version-min=10.9" npm install
 
-# Git status displayed in another language if there is more 
+# Git status displayed in another language if there is more
 # than one input sources
 export LANG="en_US.UTF-8"
