@@ -4,7 +4,7 @@ function setup() {
   for file in {aliases.local,bash_profile.local,tmux.conf.local,vimrc.local}; do
     if [ -r "$file" ] && [ -f "$file" ]; then
       echo "Link ~/.$file -> $PWD/$file"
-      ln -sf $PWD/../$file ~/.$file
+      ln -sf $PWD/$file ~/.$file
     fi;
   done;
 }
