@@ -95,7 +95,7 @@ alias dctmp='cd ~/codes/tmp'
 alias dkde='cd ~/codes/kde'
 alias dlea='cd ~/codes/learn'
 alias delap='cd ~/codes/elapp'
-alias dpps='dpnap && cd paypal-scripts'
+alias dpps='dpinfra && cd paypal-scripts'
 alias dpsap='dpnap && cd sample-app'
 alias dptsap='dptest && cd test-sample-app'
 
