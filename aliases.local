@@ -95,7 +95,7 @@ alias dctmp='cd ~/codes/tmp'
 alias dkde='cd ~/codes/kde'
 alias dlea='cd ~/codes/learn'
 alias delap='cd ~/codes/elapp'
-alias dpps='dpinfra && cd paypal-scripts'
+alias dpps='dpninfra && cd paypal-scripts'
 alias dpsap='dpnap && cd sample-app'
 alias dptsap='dptest && cd test-sample-app'
 
@@ -140,6 +140,7 @@ alias nrth='npm run test:functional:headless'
 alias nrtk='npm run test:functional:keepbrowser'
 alias nrtd='npm run test:functional:dev'
 alias nrtdeb='npm run test:functional:debug'
+alias nruc='npm run user:create'
 
 alias nrtfl='bul nrtf'
 alias nrthl='bul nrth'
@@ -237,7 +238,7 @@ alias dpi18n='dp && cd i18n'
 alias dpid='dp && cd identity'
 alias dpintl='dp && cd intl'
 alias dpxo='dp && cd checkout'
-alias dpinfra='dp && cd nodeinfra'
+alias dpninfra='dp && cd nodeinfra'
 alias dpnode='dp && cd nodejs'
 alias dpnserv='dp && cd nodeservices'
 alias dpnop='dp && cd nodeops'
@@ -365,8 +366,12 @@ alias dscore="DEBUG_SERVICECORE=1"
 alias dscore2="DEBUG_SERVICECORE=2"
 alias topnocache="CACHE_TOPOS=false"
 alias logsc="LOG_SC=1 logpret"
-alias logall="LOG_SC=4 logpret"
+alias logsca="LOG_SC=4 logpret"
 alias logpret="LOG_PRETTY=1"
+alias thlhost="TEST_HOST=localhost.paypal.com:8443"
+alias tblhost="TARGET_BASE_URL=https://localhost.paypal.com:8443"
+alias tbbdev="STAGE=te-alm-22055552002112449814325"
+alias kbrow="KEEP_BROWSER=true"
 
 # For redux example apps
 alias skippc='SKIP_PREFLIGHT_CHECK=true'
@@ -634,25 +639,16 @@ alias grtest='grunt test'
 alias grlint='grunt lint'
 alias grbuild='grunt build'
 
-alias gaut='grunt automation'
-alias gautg='grunt automation --grep'
-alias gauts='grunt automation --spec'
-alias gautsdb='grunt automation --debug=true --debug-brk=true --spec'
-alias gautsc='grunt automation --script'
-alias gautloc='grunt automation:localnginx --keep-browser=true'
-alias gautls='gautloc --parallel=true --spec'
-alias gautlsu='gautloc --parallel=true --suite'
-alias gautrs='gautloc --parallel=true --stage bankingbundlenodeweb17103150 --spec'
-alias gautds='gautloc --parallel=true --stage bankingbundlenodeweb17103238 --spec'
-alias gautdsu='gautloc --parallel=true --stage bankingbundlenodeweb17103238 --suite'
-alias gautts='gautloc --parallel=true --stage bankingbundlenodeweb17021035 --spec'
-alias gautc='grunt automation:ci --reporter spec'
-alias gautcd='gautc --stage bankingbundlenodeweb17103238'
-alias gautcr='gautc --stage bankingbundlenodeweb17103150'
-alias gautlws='gautloc --watch=true --spec'
-alias gautdbs='gautdb --spec'
-alias gautrels='grunt automation --stage bankingbundlenodeweb37133 --keep-browser=true --spec'
-alias gautdevs='grunt automation --stage bankingbundlenodeweb74669 --keep-browser=true --spec'
+alias gau='grunt automation'
+alias gaug='grunt automation --grep'
+alias gaud='grunt automation --keep-browser=true --spec'
+alias gausdb='grunt automation --debug=true --debug-brk=true --spec'
+alias gausc='grunt automation --script'
+alias gauloc='grunt automation:localnginx --keep-browser=true'
+alias gauls='gautloc --parallel=true --spec'
+alias gaulsu='gautloc --parallel=true --suite'
+alias gauc='grunt automation:ci --reporter spec'
+alias gaulws='gautloc --watch=true --spec'
 
 alias gu='gulp'
 alias ru='rackup'
