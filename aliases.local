@@ -17,6 +17,8 @@ alias ngr='nginx -s reload'
 alias ngc='nginx -c'
 alias conc='concurrently'
 
+alias ngs='nginx -c /Users/hsiatono/codes/paypal/github/devtools/nginx/nginx.dev.conf'
+
 alias npmo='npmopen'
 
 # React & Native
@@ -140,6 +142,9 @@ alias nrth='npm run test:functional:headless'
 alias nrtk='npm run test:functional:keepbrowser'
 alias nrtd='npm run test:functional:dev'
 alias nrtdeb='npm run test:functional:debug'
+alias nrt='npm run test'
+alias nrtc='npm run test client'
+alias nrts='npm run test server'
 alias nru='npm run user'
 
 alias nrtfl='bul nrtf'
@@ -285,8 +290,10 @@ alias dptsel='dptest && cd selenium'
 alias dptsnode='dptsel && cd javascript/node/selenium-webdriver'
 
 # Specs
-alias dsdm='dpspec && cd billing.DirectedPaymentsSpecification'
-alias dsdp='dpspec && cd graphql.billing.DirectedPaymentsAPISepcification'
+alias dpsdm='dpspec && cd billing.DirectedPaymentsSpecification'
+alias dpsdp='dpspec && cd graphql.billing.DirectedPaymentsAPISepcification'
+alias dpsbb='dpspec && cd CFS.BankingBundleSpecification'
+alias dpscc='dpspec && cd CFS.CardLifeCycleSpecification'
 
 # Consumer nodewebs
 alias dpfix='dphs && cd fixo'
@@ -887,6 +894,10 @@ alias jupc='jup console'
 
 # Python
 alias ipy='ipython'
+alias pye='pyenv'
+alias pyev='pyenv versions'
+# pyenv global 3.9.7
+alias pyeg='pyenv global'
 
 # Python - Anaconda
 alias dana='cd /usr/local/anaconda3'

@@ -44,8 +44,12 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export RUBYMOTION_ANDROID_SDK=~/.rubymotion-android/sdk
 
 # Python
+
+# Python environment pyenv
+# export PATH="~/.pyenv/shims:${PATH}"
+
 [ -x "$(command -v pip)" ] && eval "$(pip completion --bash)"
-[ -x "$(command -v pipenv)" ] && eval "$(pipenv --completion)"
+# [ -x "$(command -v pipenv)" ] && eval "$(pipenv --completion)"
 
 # Auto start tmux
 if command -v tmux>/dev/null; then
@@ -125,3 +129,61 @@ export LDFLAGS="-mmacosx-version-min=10.9" npm install
 # Git status displayed in another language if there is more
 # than one input sources
 export LANG="en_US.UTF-8"
+
+# NVM - Auto switch node version
+find-up () {
+    path=$(pwd)
+    while [[ "$path" != "" && ! -e "$path/$1" ]]; do
+        path=${path%/*}
+    done
+    echo "$path"
+}
+
+cdnvm(){
+    cd "$@";
+
+    # Note: tr command wasn't working on MacOS
+    # nvm_path=$(find-up .nvmrc | tr -d '[:space:]')
+    nvm_path=$(find-up .nvmrc)
+
+    # If there are no .nvmrc file, use the default nvm version
+    if [[ ! $nvm_path = *[^[:space:]]* ]]; then
+
+        declare default_version;
+        default_version=$(nvm version default);
+
+        # If there is no default version, set it to `node`
+        # This will use the latest version on your machine
+        if [[ $default_version == "N/A" ]]; then
+            nvm alias default node;
+            default_version=$(nvm version default);
+        fi
+
+        # If the current version is not the default version, set it to use the default version
+        if [[ $(nvm current) != "$default_version" ]]; then
+            nvm use default;
+        fi
+
+        elif [[ -s $nvm_path/.nvmrc && -r $nvm_path/.nvmrc ]]; then
+        declare nvm_version
+        nvm_version=$(<"$nvm_path"/.nvmrc)
+
+        echo $nvm_version
+
+        # Add the `v` suffix if it does not exists in the .nvmrc file
+        if [[ $nvm_version != v* ]]; then
+            nvm_version="v""$nvm_version"
+        fi
+
+        # If it is not already installed, install it
+        if [[ $(nvm ls "$nvm_version" | tr -d '[:space:]') == "N/A" ]]; then
+            nvm install "$nvm_version";
+        fi
+
+        if [[ $(nvm current) != "$nvm_version" ]]; then
+            nvm use "$nvm_version";
+        fi
+    fi
+}
+
+alias cd='cdnvm'
