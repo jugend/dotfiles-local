@@ -306,6 +306,7 @@ alias dpbl='dpgq && cd billingnodeserv'
 alias dpmp='dpcon && cd cfsnodeweb'
 alias dpcd='dpcon && cd compliancedashboardweb'
 alias dpucs='dpcon && cd ucsnodeweb'
+alias dpucp='dpcon && cd ucsnodeweb-ppreact'
 alias dpacon='dpcfs && cd pp-app-config'
 alias dpaui='dpcfs && cd pp-app-ui'
 alias dpacom='dpcfs && cd pp-app-common'
@@ -955,6 +956,7 @@ alias teai='te app install'
 alias teau='te app uninstall'
 alias tear='te app restart'
 
+# te ttl extend [env-name] 30d
 alias tete='te ttl extend'
 
 # Generate security context
