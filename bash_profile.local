@@ -183,3 +183,16 @@ cdnvm() {
     fi
 }
 alias cd='cdnvm'
+
+# Add user to customer list
+add2cl() {
+  cmd="curl -v -k --location 'https://msmaster.qa.paypal.com:14751/rpsreadserv/v1/customer-lists/CL-7100780069150050847/members' \
+  --header 'Content-Type: application/json' \
+  --data-raw '{
+      \"id_type\": \"ACCOUNT_NUMBER\",
+      \"id_value\": \"$1\"
+  }'"
+
+  printf "$cmd\n\n"
+  eval $cmd
+}

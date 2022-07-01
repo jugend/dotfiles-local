@@ -59,6 +59,7 @@ alias rmcache='rmr node_modules/.cache && rmr client/node_modules/.cache && rmr 
 alias dcod='cd ~/codes'
 
 alias dvid='cd ~/codes/videos'
+alias dckd='cd ~/codes/kd'
 alias druby='cd ~/codes/ruby'
 alias dpapp='cd ~/codes/phpapp'
 alias dphp='cd ~/codes/php'
@@ -300,6 +301,7 @@ alias dpfix='dphs && cd fixo'
 alias dpnfix='dphs && cd nemo-fixo'
 alias dped='dpcon && cd conspartneronbnodeweb'
 alias dpbb='dpcon && cd bankingbundlenodeweb'
+alias dpbp3='dpcon && cd bankingbundlenodeweb-phase-3'
 alias dpdn='dpcon && cd dpnodeweb'
 alias dpdnt='dpcon && cd dpnodeweb-test'
 alias dpbl='dpgq && cd billingnodeserv'
@@ -307,6 +309,7 @@ alias dpmp='dpcon && cd cfsnodeweb'
 alias dpcd='dpcon && cd compliancedashboardweb'
 alias dpucs='dpcon && cd ucsnodeweb'
 alias dpucp='dpcon && cd ucsnodeweb-ppreact'
+alias dpucp3='dpcon && cd ucsnodeweb-phase3'
 alias dpacon='dpcfs && cd pp-app-config'
 alias dpaui='dpcfs && cd pp-app-ui'
 alias dpacom='dpcfs && cd pp-app-common'
@@ -374,12 +377,14 @@ alias dscore="DEBUG_SERVICECORE=1"
 alias dscore2="DEBUG_SERVICECORE=2"
 alias topnocache="CACHE_TOPOS=false"
 alias logsc="LOG_SC=1 logpret"
-alias logsca="LOG_SC=4 logpret"
+alias logsc4="LOG_SC=4 logpret"
 alias logpret="LOG_PRETTY=1"
 alias thlhost="TEST_HOST=localhost.paypal.com:8443"
 alias tblhost="TARGET_BASE_URL=https://localhost.paypal.com:8443"
 alias tbbdev="STAGE=te-alm-22055552002112449814325"
 alias kbrow="KEEP_BROWSER=true"
+
+alias shp3='SERVICE_HOST=te-cclsppccrebrandingp1-1'
 
 # For redux example apps
 alias skippc='SKIP_PREFLIGHT_CHECK=true'
@@ -934,6 +939,7 @@ alias upsyspol='tccutil reset AppleEvents; tccutil reset SystemPolicyAllFiles'
 alias te='testenv'
 alias telog='te login'
 alias tec='te create'
+alias tece='te create 3d --backed-by msmaster --env-name'
 alias tea='te app'
 alias ted='te desc'
 alias teh='te help'
