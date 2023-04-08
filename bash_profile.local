@@ -1,5 +1,6 @@
 # Override default MacOS bash shell after upgrade, so that bash complete works fine
-export SHELL=/usr/local/bin/bash
+# export SHELL=/usr/local/bin/bash
+export SHELL=/opt/homebrew/bin/bash
 
 
 # Disable logout Ctrl-D shortcut
@@ -196,3 +197,4 @@ add2cl() {
   printf "$cmd\n\n"
   eval $cmd
 }
+

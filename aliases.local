@@ -2,6 +2,7 @@
 alias git='hub'
 alias https='http-server'
 alias ly='lynx'
+
 alias rs='react-scripts'
 alias chd='chromedriver'
 alias jsb='js-beautify'
@@ -144,9 +145,11 @@ alias nrtk='npm run test:functional:keepbrowser'
 alias nrtfd='npm run test:functional:dev'
 alias nrtdeb='npm run test:functional:debug'
 alias nrt='npm run test'
+alias nrtcov='npm run test --coverage'
 alias nrtc='npm run test client'
 alias nrts='npm run test server'
 alias nru='npm run user'
+alias nrud='npm run user:digital'
 
 alias nrtfl='bul nrtf'
 alias nrthl='bul nrth'
@@ -162,6 +165,7 @@ alias bul='BASE_URL=https://localhost.paypal.com:8443'
 alias kbr='KEEP_BROWSER=true'
 
 alias nrd='kdev; npm run dev'
+alias nrdev='kdev; npm run develop'
 alias nrdv='kdev; npm run dev:verbose'
 alias nrdd='kdev; npm run dev:debug'
 alias nrds='npm run dev:server'
@@ -205,10 +209,11 @@ alias kins='kport 9229'
 alias agp='agg package.json'
 
 alias dp='cd ~/codes/paypal'
+alias dpa='cd ~/codes/paypal/api'
 alias dpauth='dp && cd auth'
 alias dpspec='dp && cd specs'
 alias dptrack='dp && cd tracking'
-alias dpacfs='dpa && cd cfscard'
+alias dpacfs='dpa && cd CFS.CardLifeCycleSpecification'
 alias dpabb='dpa && cd bankingbundle'
 alias dpadp='dpa && cd billing.DirectedPaymenttsSpecification'
 alias dpad='dpa && cd adroit'
@@ -300,14 +305,20 @@ alias dpscc='dpspec && cd CFS.CardLifeCycleSpecification'
 alias dpfix='dphs && cd fixo'
 alias dpnfix='dphs && cd nemo-fixo'
 alias dped='dpcon && cd conspartneronbnodeweb'
-alias dpbb='dpcon && cd bankingbundlenodeweb'
-alias dpbp3='dpcon && cd bankingbundlenodeweb-phase-3'
+alias dpbb='dpcon && cd bankingbundlenodeweb-develop'
+alias dpb4='dpcon && cd bankingbundlenodeweb-phase4.1'
+alias dpbp3='dpcon && cd bankingbundlenodeweb-phase3'
 alias dpdn='dpcon && cd dpnodeweb'
 alias dpdnt='dpcon && cd dpnodeweb-test'
 alias dpbl='dpgq && cd billingnodeserv'
 alias dpmp='dpcon && cd cfsnodeweb'
 alias dpcd='dpcon && cd compliancedashboardweb'
 alias dpucs='dpcon && cd ucsnodeweb'
+alias dpucsc='dpcon && cd ucsnodeweb-content'
+alias dpuc4='dpcon && cd ucsnodeweb-phase4.1'
+alias dpuc42='dpcon && cd ucsnodeweb-phase4.2'
+alias dpucr='dpcon && cd ucsnodeweb-rewards'
+alias dpucsat='dpcon && cd ucsnodeweb-at'
 alias dpucp='dpcon && cd ucsnodeweb-ppreact'
 alias dpucp3='dpcon && cd ucsnodeweb-phase3'
 alias dpacon='dpcfs && cd pp-app-config'
@@ -1004,4 +1015,11 @@ cuser() {
   echo "$output"
   echo "$output" | grep created: |  awk '{print $5}' | sed 's/,$//' | pbcopy
   cd -
+}
+
+# Validate SC
+valsc1() {
+  curl --insecure -X GET https://msmaster.qa.paypal.com:12714/v1/oauth2/token/security-context/verify \
+  -H 'cache-control: no-cache' \
+  -H 'x-paypal-security-context: $1'
 }
