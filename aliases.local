@@ -998,13 +998,17 @@ alias testecho='echo helllllo'
 
 # Functions
 pdid() {
-  post "http://sretools02.qa.paypal.com/cgi-bin/decrypt_adv2.py?button=JSON&type=6" \
-    --data "id_list=$1"
+  output=$(post "http://sretools02.qa.paypal.com/cgi-bin/decrypt_adv2.py?button=JSON&type=6" \
+    --data "id_list=$1")
+  echo $output
+  echo $output | grep '"Output"' | awk -F ':'  '{print $3}' | awk '{ print $1}'  | sed 's/"//g' | pbcopy
 }
 
 peid() {
-  post "http://sretools02.qa.paypal.com/cgi-bin/decrypt_adv2.py?button=JSON&type=6&action=enc13" \
-    --data "id_list=$1"
+  output=$(post "http://sretools02.qa.paypal.com/cgi-bin/decrypt_adv2.py?button=JSON&type=6&action=enc13" \
+    --data "id_list=$1")
+  echo $output
+  echo $output | grep '"Output"' | awk -F ':'  '{print $3}' | awk '{ print $1}'  | sed 's/"//g' | pbcopy
 }
 
 pftoreport() {
