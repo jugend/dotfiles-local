@@ -143,6 +143,7 @@ alias nrtf='npm run test:functional'
 alias nrth='npm run test:functional:headless'
 alias nrtk='npm run test:functional:keepbrowser'
 alias nrtfd='npm run test:functional:dev'
+alias nrtfc='npm run test:functional:ci'
 alias nrtdeb='npm run test:functional:debug'
 alias nrt='npm run test'
 alias nrtcov='npm run test --coverage'
@@ -206,13 +207,15 @@ alias dbpps='DEBUG=paypal-scripts:*'
 alias kdev='kport 8000; kport 9229'
 alias kssl='kport 8443'
 alias kins='kport 9229'
+alias kbs='kport 45690'
 alias agp='agg package.json'
 
 alias dp='cd ~/codes/paypal'
 alias dpa='cd ~/codes/paypal/api'
+alias dps='cd ~/codes/paypal/services'
 alias dpan='dp && cd ~/codes/paypal/android'
 alias dpi='dp && cd ~/codes/paypal/identity'
-alias dpauth='dp && cd auth'
+alias dpauth='dp && cd nodeauth'
 alias dpspec='dp && cd specs'
 alias dptrack='dp && cd tracking'
 alias dpacfs='dpa && cd CFS.CardLifeCycleSpecification'
@@ -220,6 +223,7 @@ alias dpabb='dpa && cd bankingbundle'
 alias dpadp='dpa && cd billing.DirectedPaymenttsSpecification'
 alias dpad='dpa && cd adroit'
 alias dpcon='dp && cd consumerweb'
+alias dpccust='dp && cd customer'
 alias dpco='dpcon && cd checkout'
 alias dpcoh='dpcon && cd checkout/hermesnodeweb'
 alias dpap='dpcon && cd autopaynodeweb'
@@ -291,7 +295,7 @@ alias dpcxa='dpcx && cd cxpw-acorns-widget'
 alias dpcxg='dpcx && cd cxpw-goals-widget'
 alias dpcxcw='dpcx && cd cwpattern-lib-paypal'
 alias dpkep='dpcust && cd kepler'
-alias dppui='dp && cd paypalui'
+alias dppui='dp && cd ppui'
 alias dphad='dp && cd hadoop'
 alias dp3d='dp && cd 3ds2'
 
@@ -322,6 +326,7 @@ alias dpuc4='dpcon && cd ucsnodeweb-phase4.1'
 alias dpuc42='dpcon && cd ucsnodeweb-phase4.2'
 alias dpucr='dpcon && cd ucsnodeweb-rewards'
 alias dpucsat='dpcon && cd ucsnodeweb-at'
+alias dpucsq='dpcon && cd ucsnodeweb-ql'
 alias dpucp='dpcon && cd ucsnodeweb-ppreact'
 alias dpucp3='dpcon && cd ucsnodeweb-phase3'
 alias dpacon='dpcfs && cd pp-app-config'
@@ -346,6 +351,7 @@ alias dpmonw='dpcon && cd moneynodeweb.wiki'
 alias dpsam='dpcon && cd pps-samples'
 alias dpmb='dpcon && cd moneyboxnodeweb'
 alias dpdc='dpcon && cd debitcardnodeweb'
+alias dpdcq='dpcon && cd debitcardnodeweb-ql'
 alias dpbp='dpcon && cd billpaynodeweb'
 alias dpabp='dpa && cd billing.BillManagementSpecification'
 
@@ -976,6 +982,9 @@ alias teai='te app install'
 alias teau='te app uninstall'
 alias tear='te app restart'
 
+# Android
+alias psae='~/codes/paypal/StartAndroidEmulator/startEmulator'
+
 # te ttl extend [env-name] 30d
 alias tete='te ttl extend'
 
@@ -996,16 +1005,19 @@ alias dpgqlc='gqsl graphql/enums/*.graphql graphql/inputs/*.graphql graphql/type
 
 alias testecho='echo helllllo'
 
+# iOS Simulator
+alias oios15='open -a "Simulator" --args -CurrentDeviceUDID 206ACEB4-7218-4851-8B72-639640335CEC'
+
 # Functions
 pdid() {
-  output=$(post "http://sretools02.qa.paypal.com/cgi-bin/decrypt_adv2.py?button=JSON&type=6" \
+  output=$(post "http://sre-system.pp-devcos-esre.us-central1.gcp.dev.paypalinc.com:8456/decrypt-tool/cgi-bin/decrypt_adv2.py?button=JSON&type=6" \
     --data "id_list=$1")
   echo $output
   echo $output | grep '"Output"' | awk -F ':'  '{print $3}' | awk '{ print $1}'  | sed 's/"//g' | pbcopy
 }
 
 peid() {
-  output=$(post "http://sretools02.qa.paypal.com/cgi-bin/decrypt_adv2.py?button=JSON&type=6&action=enc13" \
+  output=$(post "http://sre-system.pp-devcos-esre.us-central1.gcp.dev.paypalinc.com:8456/decrypt-tool/cgi-bin/decrypt_adv2.py?button=JSON&type=6&action=enc13" \
     --data "id_list=$1")
   echo $output
   echo $output | grep '"Output"' | awk -F ':'  '{print $3}' | awk '{ print $1}'  | sed 's/"//g' | pbcopy
