@@ -160,6 +160,16 @@ alias nrts='npm run test server'
 alias nru='npm run user'
 alias nrus='npm run users'
 alias nrud='npm run user:digital'
+alias nrud='npm run user:digital'
+alias nrb='npm run build'
+alias nrwb='npm run webpack-build'
+alias nrwbd='npm run webpack-build:dev'
+alias nrppt='npm run pre-push-test'
+alias nrpptb='npm run pre-push-test-build'
+
+alias ncn='npm config'
+alias ncg='npm config get'
+alias ncs='npm config set'
 
 alias nrtfl='bul nrtf'
 alias nrthl='bul nrth'
@@ -175,6 +185,7 @@ alias bul='BASE_URL=https://localhost.paypal.com:8443'
 alias kbr='KEEP_BROWSER=true'
 
 alias nrd='kdev; npm run dev'
+alias nrdb='kdev; npm run debug'
 alias nrdev='kdev; npm run develop'
 alias nrdv='kdev; npm run dev:verbose'
 alias nrdd='kdev; npm run dev:debug'
@@ -182,6 +193,13 @@ alias nrds='npm run dev:server'
 alias nrdsv='npm run dev:server:verbose'
 alias nrdc='npm run dev:client'
 alias nrdsh='npm run dev:shared'
+
+# Invoice
+alias nrdd='npm run dev:desktop'
+alias nrddpv='npm run dev:desktopPayerview'
+alias nrdmpv='npm run dev:mwebPayerview'
+alias nrdbv='npm run dev:mwebPayerview'
+alias nrdmr2p='npm run dev:mobileR2p'
 
 alias nrdocd='npm run docs:dev'
 alias nrdocb='npm run docs:build'
@@ -233,6 +251,7 @@ alias dpabb='dpa && cd bankingbundle'
 alias dpadp='dpa && cd billing.DirectedPaymenttsSpecification'
 alias dpad='dpa && cd adroit'
 alias dpcon='dp && cd consumerweb'
+alias dpm='dp && cd merchant'
 alias dpccust='dp && cd customer'
 alias dpco='dpcon && cd checkout'
 alias dpcoh='dpcon && cd checkout/hermesnodeweb'
@@ -366,6 +385,13 @@ alias dpdc='dpcon && cd debitcardnodeweb'
 alias dpdcq='dpcon && cd debitcardnodeweb-ql'
 alias dpbp='dpcon && cd billpaynodeweb'
 alias dpabp='dpa && cd billing.BillManagementSpecification'
+alias dpin='dpm && cd invoicingnodeweb'
+alias dpins='dpm && cd invoicingnodeweb-subs'
+alias dpins2='dpm && cd invoicingnodeweb-subs2'
+alias dpinw='dpm && cd invoicingnodeweb-wip'
+alias dpinn='dpm && cd invoicingnodeweb-new'
+alias dpind='dpm && cd invoicingnodeweb-develop'
+alias dpips='dpm && cd product-status-and-requirements'
 
 alias dpcxb='dpcx && cd cxpw-balance-widget'
 alias dpcxg='dpcx && cd cxpw-goals-widget'
@@ -750,10 +776,16 @@ alias wp='webpack'
 alias wpw='webpack -w'
 alias wpcolors='webpack --process --colors'
 alias wpwatch='webpack --process --colors --watch'
-alias wpconfig='webpack --config'
+alias wpc='webpack --config'
 alias wpdev='webpack-dev-server'
 alias wpdevconfig='webpack-dev-server --config'
 alias wpdevhot='webpack-dev-server --hot --inline'
+
+# invoicingnodeweb
+function wpcin() {
+  echo "> Running... 'webpack --config ./webpack/config/$1'"
+  webpack --stats verbose --config ./webpack/config/$1
+}
 
 # Json grep
 function jsgrep() {
