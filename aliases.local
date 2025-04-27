@@ -22,6 +22,9 @@ alias ngs='nginx -c /Users/hsiatono/codes/paypal/github/devtools/nginx/nginx.dev
 
 alias npmo='npmopen'
 
+# Github
+alias ghc='gh copilot'
+
 # React & Native
 alias crap='create-react-app'
 
@@ -61,6 +64,7 @@ alias dcod='cd ~/codes'
 
 alias dvid='cd ~/codes/videos'
 alias dckd='cd ~/codes/kd'
+alias dcl='cd ~/codes/lua'
 alias druby='cd ~/codes/ruby'
 alias dpapp='cd ~/codes/phpapp'
 alias dphp='cd ~/codes/php'
@@ -501,6 +505,10 @@ alias dvscreen='dyvideo && cd screen-web'
 alias dhscreen='dyhsiatono && cd screen-web'
 alias dvscreenv='dyvideo && cd screen-web-viewcounts'
 alias dscreeng='cd ~/codes/yahoo/herry/screen-web'
+
+# VS Code
+alias dvs='cd /Users/hsiatono/.vscode'
+alias dvse='cd /Users/hsiatono/.vscode/extensions'
 
 # Ruby
 alias dbj='cd ~/codes/rubyapp/bookjetty'
