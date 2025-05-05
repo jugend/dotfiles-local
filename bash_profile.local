@@ -206,7 +206,9 @@ add2cl() {
 ###
 # Github Copilot
 ################
-ghcs() {
+
+# Copilot Suggest
+cs() {
   TARGET="shell"
   local GH_DEBUG="$GH_DEBUG"
   local GH_HOST="$GH_HOST"
@@ -292,7 +294,8 @@ EOF
   fi
 }
 
-ghce() {
+# Copilot explain
+ce() {
   local GH_DEBUG="$GH_DEBUG"
   local GH_HOST="$GH_HOST"
 

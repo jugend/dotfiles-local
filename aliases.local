@@ -611,16 +611,18 @@ alias dfunland='cd ~/projects/kursdesign/kursprojects/201103_funland'
 
 # Logs
 alias dlog='cd /var/log/www'
-alias tbj='tail -f -n 1000 /var/log/www/bookjetty/apache2_access.log'
-alias tbje='tail -f -n 1000 /var/log/www/bookjetty/apache2_error.log'
-alias thacke='tail -f -n 1000 /var/log/www/hack/apache2_error.log'
-alias tslowq='tail -f -n 1000 /var/log/mysql/mysql-slow.log'
-alias tyts='tail -f /home/y/logs/yts/mon.log'
-alias tats='tail -f /home/y/logs/trafficserver/mon.log'
-alias tford='tail -f /home/y/logs/yford.log'
-alias tnge='tail -f -n 500 /usr/local/var/log/nginx/error.log'
-alias tnga='tail -f -n 500 /usr/local/var/log/nginx/access.log'
-alias tnohup='tf nohup.out'
+alias tfnohup='tf nohup.out'
+alias tfbj='tf -n 1000 /var/log/www/bookjetty/apache2_access.log'
+alias tfbje='tf -n 1000 /var/log/www/bookjetty/apache2_error.log'
+alias tfhacke='tf -n 1000 /var/log/www/hack/apache2_error.log'
+alias tfslowq='tf -n 1000 /var/log/mysql/mysql-slow.log'
+alias tfyts='tf /home/y/logs/yts/mon.log'
+alias tfats='tf /home/y/logs/trafficserver/mon.log'
+alias tford='tf /home/y/logs/yford.log'
+alias tfnge='tf -n 500 /usr/local/var/log/nginx/error.log'
+alias tfnga='tf -n 500 /usr/local/var/log/nginx/access.log'
+alias tfc='tf ~/.local/state/nvim/conform.log'
+alias tfl='tf /Users/hsiatono/.local/state/nvim/lsp.log'
 
 function grep_log() {
   # grep "data is not a MediaModelList instance" error-2013-04* | awk '{print$14}' | sort | uniq -c | sort -rn
