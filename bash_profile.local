@@ -22,8 +22,10 @@ export SHELL=/opt/homebrew/bin/bash
 
 # Nvm
 export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# source $(brew --prefix nvm)/nvm.sh
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# Lazy load nvm, previous script was slow
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use
 
 # Avn
 [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
@@ -32,15 +34,15 @@ source $(brew --prefix nvm)/nvm.sh
 export NODE_PATH=$NODE_PATH:/usr/local/lib/jsctags/:$`npm root -g`
 export PATH=$PATH:$HOME/node_modules/.bin:./node_modules/.bin
 
-# Travis
-[ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
+# Travis CI
+# [ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
 
 # Java
 export JAVA_HOME=`/usr/libexec/java_home`
 
 # Rvm
-export PATH="$PATH:$HOME/.rvm/bin"
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+# export PATH="$PATH:$HOME/.rvm/bin"
+# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # Rust
 export PATH="$HOME/.cargo/bin:$PATH"
