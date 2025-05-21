@@ -210,7 +210,7 @@ add2cl() {
 ################
 
 # Copilot Suggest
-cs() {
+gcs() {
   TARGET="shell"
   local GH_DEBUG="$GH_DEBUG"
   local GH_HOST="$GH_HOST"
@@ -297,7 +297,7 @@ EOF
 }
 
 # Copilot explain
-ce() {
+gce() {
   local GH_DEBUG="$GH_DEBUG"
   local GH_HOST="$GH_HOST"
 
