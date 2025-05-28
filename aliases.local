@@ -410,6 +410,7 @@ alias dprlib='dpre && cd libs'
 alias dprutil='dpre && cd utils'
 alias dprnode='dpre && cd nodeweb'
 alias dpdoc='dpre && cd docs/docz2'
+alias dpbd='cd .build/jsx/desktop'
 
 alias dpkra='dpgit && cd kraken'
 alias dkkra='dpkra && cd kraken-js'
@@ -1013,19 +1014,33 @@ alias upsyspol='tccutil reset AppleEvents; tccutil reset SystemPolicyAllFiles'
 alias te='testenv'
 alias telog='te login'
 alias tec='te create'
-alias tece='te create 3d --backed-by msmaster --env-name'
+alias tec1d='te create 24h --backed-by msmaster --env-name'
+alias tec3d='te create 3d --backed-by msmaster --env-name'
+
+# test-env app
 alias tea='te app'
+alias teals='tea list'
+# teain [te-host-name] [manifest-name]:1.0.21_20240329072953131
+alias teain='te app install'
+# tead [te-host-name] [app-name]
+alias tead='tea desc'
+# tear [te-host-name] [app-name]
+alias tear='te app restart'
+
+# test-env spec
+alias tesp='te spec'
+# tesg [hos-name] [app-name]
+alias tespg='te spec generate'
+
 alias ted='te desc'
 alias teh='te help'
-alias tel='te list'
+alias tels='te list'
 alias tecl='te clone'
 alias tecp='te scp'
-alias tesp='te spec'
 alias tetr='te transfer'
 alias teup='te update'
-alias teal='tea list'
-alias tead='tea desc'
-alias tear='tea restart'
+
+# testenv ssh [host-name] [app-name]
 alias tessh='te ssh'
 
 # View Aapplication log, teappd [env-name] [app-name]
