@@ -1,5 +1,4 @@
 # Command
-alias git='hub'
 alias https='http-server'
 alias ly='lynx'
 
@@ -140,6 +139,10 @@ alias ddevd='ddev --debug'
 alias dbuild='docz build'
 alias dshare='docz share'
 
+#pnpm
+alias pnp='pnpm'
+alias pnpi='pnpm install'
+
 #NPM
 alias nrep='npmrepo'
 alias nrepcl='npmrepoclone'
@@ -242,9 +245,14 @@ alias agp='agg package.json'
 
 alias dp='cd ~/codes/paypal'
 alias dpa='cd ~/codes/paypal/api'
+alias dpam='cd ~/codes/paypal/api/merchant'
+alias dpad='cd ~/codes/paypal/api/debit-cards'
+alias dpac='cd ~/codes/paypal/api/common'
+alias dpap='cd ~/codes/paypal/api/payments'
+alias dpaid='cd ~/codes/paypal/api/identity'
 alias dps='cd ~/codes/paypal/services'
 alias dpan='dp && cd ~/codes/paypal/android'
-alias dpi='dp && cd ~/codes/paypal/identity'
+alias dpid='dp && cd ~/codes/paypal/identity'
 alias dpauth='dp && cd nodeauth'
 alias dpspec='dp && cd specs'
 alias dptrack='dp && cd tracking'
@@ -290,6 +298,7 @@ alias dpid='dp && cd identity'
 alias dpintl='dp && cd intl'
 alias dpxo='dp && cd checkout'
 alias dpninfra='dp && cd nodeinfra'
+alias dpnf='dpp && cd node-framework'
 alias dpnode='dp && cd nodejs'
 alias dpnserv='dp && cd nodeservices'
 alias dpnop='dp && cd nodeops'
@@ -331,6 +340,13 @@ alias dpkep='dpcust && cd kepler'
 alias dppui='dp && cd ppui'
 alias dphad='dp && cd hadoop'
 alias dp3d='dp && cd 3ds2'
+alias dpcert='cd /usr/local/etc/openssl/certs'
+
+# AI
+alias dpi='dp && cd ai'
+alias dpisd='dpi && cd paypal-sdlc-assistant'
+alias dpim='dpi && cd mcp'
+alias dpclog='cd ~/Library/Logs/Claude'
 
 alias dptsel='dptest && cd selenium'
 alias dptsnode='dptsel && cd javascript/node/selenium-webdriver'
@@ -399,6 +415,7 @@ alias dpips='dpm && cd product-status-and-requirements'
 # PayPal-R nodewebs
 alias dpap='dpp && cd apnodeweb'
 alias dpap1='dpp && cd apnodeweb-dev1'
+alias dpmod='dpp && cd modularcheckoutnodeweb'
 
 alias dpcxb='dpcx && cd cxpw-balance-widget'
 alias dpcxg='dpcx && cd cxpw-goals-widget'
@@ -627,6 +644,7 @@ alias tfnge='tf -n 500 /usr/local/var/log/nginx/error.log'
 alias tfnga='tf -n 500 /usr/local/var/log/nginx/access.log'
 alias tfc='tf ~/.local/state/nvim/conform.log'
 alias tfl='tf /Users/hsiatono/.local/state/nvim/lsp.log'
+alias tfcmcp='tf ~/Library/Logs/Claude/mcp.log'
 
 function grep_log() {
   # grep "data is not a MediaModelList instance" error-2013-04* | awk '{print$14}' | sort | uniq -c | sort -rn
@@ -982,6 +1000,7 @@ alias pye='pyenv'
 alias pyev='pyenv versions'
 # pyenv global 3.9.7
 alias pyeg='pyenv global'
+alias venv='virtualenv'
 
 # Python - Anaconda
 alias dana='cd /usr/local/anaconda3'
@@ -1082,6 +1101,9 @@ alias oios15='open -a "Simulator" --args -CurrentDeviceUDID 206ACEB4-7218-4851-8
 
 # Next.js
 alias nxca='npx create-next-app@latest'
+
+# Claude
+alias ccus='npx ccusage'
 
 # Functions
 pdid() {
