@@ -44,8 +44,8 @@ export JAVA_HOME=`/usr/libexec/java_home`
 # export PATH="$PATH:$HOME/.rvm/bin"
 # [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
-# Rust
-export PATH="$HOME/.cargo/bin:$PATH"
+# Rust, VSCode
+export PATH="$HOME/.cargo/bin:/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin:$PATH"
 
 # Ruby Motion
 export RUBYMOTION_ANDROID_SDK=~/.rubymotion-android/sdk
@@ -145,6 +145,10 @@ export PUPPETEER_EXECUTABLE_PATH=`which chromium`
 # ASDF For node, ruby version management
 # source $(brew --prefix asdf)/libexec/asdf.sh
 # source $(brew --prefix asdf)/etc/bash_completion.d/asdf.bash
+
+# Claude - To prevent invalid_request_error
+export DISABLE_AUTOUPDATER=1
+export CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS=1
 
 # NVM - Auto switch node version
 cdnvm() {

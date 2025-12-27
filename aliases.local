@@ -25,6 +25,10 @@ alias npmo='npmopen'
 alias ghc='gh copilot'
 alias ghce='ghc explain'
 alias ghcs='ghc suggest'
+alias ghl='gh auth login'
+alias ghlo='gh auth logout'
+alias ghs='gh auth status'
+alias ghsw='gh auth switch'
 
 # React & Native
 alias crap='create-react-app'
@@ -88,10 +92,13 @@ alias dhtml5='cd ~/codes/html5'
 alias dhapp='cd ~/codes/html5app'
 alias dmisc='cd ~/codes/misc'
 alias dpn='cd ~/codes/paypal/nextjs'
+alias dpnn='dpn && cd next.js'
 alias dpnna='dpn && cd nextjs-apps'
 alias dpnra='dpn && cd ref-apps'
 alias dpnta='dpn && cd test-apps'
-alias dpnpn='/Users/hsiatono/codes/paypal/nextjs/node-framework/modules/paypalize-nextjs'
+alias dpnf='/Users/hsiatono/codes/paypal/nextjs/node-framework'
+alias dpnfm='dpnf; cd modules'
+alias dppn='dpnf; cd modules/paypalize-nextjs'
 alias dpns='dpn && cd my-app'
 alias dpnsa='dpn && cd my-app-api'
 alias dpnt='dpn && cd nextjstemplatenodeweb'
@@ -143,9 +150,26 @@ alias ddevd='ddev --debug'
 alias dbuild='docz build'
 alias dshare='docz share'
 
-#pnpm
-alias pnp='pnpm'
-alias pnpi='pnpm install'
+# pnpm 
+alias pn='pnpm'
+alias pni='pnpm install'
+alias pna='pnpm add'
+alias pnad='pnpm add -D'
+alias pnrm='pnpm remove'
+alias pnr='pnpm run'
+alias pnrd='pnpm run dev'
+alias pnrb='pnpm run build'
+alias pnrt='pnpm run test'
+alias pnrl='pnpm run lint'
+alias pns='pnpm start'
+alias pnl='pnpm list'
+alias pnw='pnpm why'
+alias pne='pnpm exec'
+alias pns='pnpm store'
+# alias pnsp='pnpm store prune'
+# alias pndl='pnpm dlx'
+# alias pnu='pnpm update'
+# alias pno=outdated'
 
 #NPM
 alias nrep='npmrepo'
@@ -176,6 +200,8 @@ alias nrwb='npm run webpack-build'
 alias nrwbd='npm run webpack-build:dev'
 alias nrppt='npm run pre-push-test'
 alias nrpptb='npm run pre-push-test-build'
+alias nrpc='.husky/pre-commit'
+alias nrpp='.husky/pre-push'
 
 alias ncn='npm config'
 alias ncg='npm config get'
@@ -195,6 +221,8 @@ alias bul='BASE_URL=https://localhost.paypal.com:8443'
 alias kbr='KEEP_BROWSER=true'
 
 alias nrd='kdev; npm run dev'
+alias nrdi='kdev; npm run dev:inspect'
+alias nrdd='kdev; npm run dev:debug'
 alias nrdb='kdev; npm run debug'
 alias nrdev='kdev; npm run develop'
 alias nrdv='kdev; npm run dev:verbose'
@@ -205,7 +233,7 @@ alias nrdc='npm run dev:client'
 alias nrdsh='npm run dev:shared'
 
 # Invoice
-alias nrdd='npm run dev:desktop'
+alias nrdde='npm run dev:desktop'
 alias nrddpv='npm run dev:desktopPayerview'
 alias nrdmpv='npm run dev:mwebPayerview'
 alias nrdbv='npm run dev:mwebPayerview'
@@ -241,7 +269,7 @@ alias dlml='dlea && cd machine-learning'
 # Paypal
 alias pps='paypal-scripts'
 alias dbpps='DEBUG=paypal-scripts:*'
-alias kdev='kport 8000; kport 9229; kport 3000'
+alias kdev='kport 3000; kport 8000; kport 9229'
 alias kssl='kport 8443'
 alias kins='kport 9229'
 alias kbs='kport 45690'
@@ -249,6 +277,7 @@ alias agp='agg package.json'
 
 alias dp='cd ~/codes/paypal'
 alias dpa='cd ~/codes/paypal/api'
+alias dpas='cd ~/codes/paypal/api-servers'
 alias dpam='cd ~/codes/paypal/api/merchant'
 alias dpad='cd ~/codes/paypal/api/debit-cards'
 alias dpac='cd ~/codes/paypal/api/common'
@@ -267,7 +296,14 @@ alias dpadp='dpa && cd billing.DirectedPaymenttsSpecification'
 alias dpad='dpa && cd adroit'
 alias dpcon='dp && cd consumerweb'
 alias dpp='dp && cd paypal'
-alias dpb2='dpp && cd b2bnodeweb'
+alias dpo='dp && cd onepaypal'
+alias dpb2t='dpp && cd b2bnodeweb'
+alias dpb2td='dpp && cd b2bnodeweb-dev'
+alias dpb2='dpo && cd b2bpaymentsnodeweb'
+alias dpb2d='dpo && cd b2bpaymentsnodeweb-develop'
+alias dpb2h='dpo && cd b2bpaymentsnodeweb-header-footer'
+alias dpb2p='dpo && cd b2bpaymentsnodeweb-prettier-vitest'
+alias dpb2a='dpo && cd b2bpaymentsnodeweb-api'
 alias dpm='dp && cd merchant'
 alias dpccust='dp && cd customer'
 alias dpco='dpcon && cd checkout'
@@ -316,6 +352,8 @@ alias dpgit='dp && cd github'
 alias dpdevt='dp && cd github/devtools'
 alias dpdevn='dp && cd github/devnotes'
 alias dpdevmon='dpdevn && cd moneynode'
+alias dpdevb='dpdevn && cd b2b'
+alias dpdevbf='dpdevn && cd b2b/fpti'
 alias dpnserv='dp && cd nodeservices'
 alias dpapp='dp && cd appplatform'
 alias dptest='dp && cd test'
@@ -349,14 +387,22 @@ alias dpcert='cd /usr/local/etc/openssl/certs'
 
 # AI
 alias dpi='dp && cd ai'
+alias dpai='dp && cd ai'
 alias dpisd='dpi && cd paypal-sdlc-assistant'
 alias dpim='dpi && cd mcp'
-alias dpims='dpi && cd mcp-servers'
+alias dpims='dpim && cd mcp-servers'
+alias dpimt='dpim && cd test-apps'
 alias dpip='dpi && cd prompts'
 alias dcclog='cd ~/Library/Logs/Claude'
 
+# Claude
+alias dpc='dp && cd Claude'
+
 alias dptsel='dptest && cd selenium'
 alias dptsnode='dptsel && cd javascript/node/selenium-webdriver'
+
+# MCP
+alias mcpi='npx @modelcontextprotocol/inspector'
 
 # Specs
 alias dpsdm='dpspec && cd billing.DirectedPaymentsSpecification'
@@ -409,7 +455,6 @@ alias dpsam='dpcon && cd pps-samples'
 alias dpmb='dpcon && cd moneyboxnodeweb'
 alias dpdc='dpcon && cd debitcardnodeweb'
 alias dpdcq='dpcon && cd debitcardnodeweb-ql'
-alias dpbp='dpcon && cd billpaynodeweb'
 alias dpabp='dpa && cd billing.BillManagementSpecification'
 alias dpin='dpm && cd invoicingnodeweb'
 alias dpins='dpm && cd invoicingnodeweb-subs'
@@ -421,8 +466,9 @@ alias dpips='dpm && cd product-status-and-requirements'
 
 # PayPal-R nodewebs
 alias dpap='dpp && cd apnodeweb'
-alias dpap1='dpp && cd apnodeweb-dev1'
-alias dpmod='dpna && cd modularcheckoutnodeweb'
+alias dpapd='dpp && cd apnodeweb-dev'
+alias dpapo='dpp && cd apnodeweb-ob'
+alias dpmod='dpnna && cd modularcheckoutnodeweb'
 
 alias dpcxb='dpcx && cd cxpw-balance-widget'
 alias dpcxg='dpcx && cd cxpw-goals-widget'
@@ -544,6 +590,16 @@ alias dbj='cd ~/codes/rubyapp/bookjetty'
 # Github
 alias dfgraph='cd ~/codes/github/fgraph'
 alias daecs='cd ~/codes/github/amazon-ecs'
+
+# Claude
+alias c='claude'
+alias ccc='c --continue' # Continue last session
+alias ccr='c --resume'   # Resume previous sessions, need to select or pass session ID
+alias ccp='c -p'         # Run one-off and exit
+alias ccd='c --debug'    # For troubleshoting, developement, has timestamp information
+alias ccv='c --verbose'  # To understand workflow steps
+alias ccdv='c --debug --verbose'
+alias ccp='c --permission-mode plan' # Enter planning mode
 
 # PHP
 alias dazone='cd ~/codes/phpapp/azone'
@@ -1080,6 +1136,11 @@ alias teai='te app install'
 alias teau='te app uninstall'
 alias tear='te app restart'
 
+# typescript
+alias tscn='tsc --noEmit'
+alias tscs='tsc --project tsconfig.server.json'
+alias tsca='tscn && tscs'
+
 # Android
 alias psae='~/codes/paypal/StartAndroidEmulator/startEmulator'
 
@@ -1114,7 +1175,8 @@ alias ccus='npx ccusage'
 
 # Functions
 pdid() {
-  output=$(post "http://sre-system.pp-devcos-esre.us-central1.gcp.dev.paypalinc.com:8456/decrypt-tool/cgi-bin/decrypt_adv2.py?button=JSON&type=6" \
+  # output=$(post "http://sre-system.pp-devcos-esre.us-central1.gcp.dev.paypalinc.com:8456/decrypt-tool/cgi-bin/decrypt_adv2.py?button=JSON&type=6" \
+  output=$(post "https://sre-system-devcos-vm.dev51-test-apps-decrypt-tool.dev51.cbf.dev.paypalinc.com:8456/decrypt-tool/cgi-bin/decrypt_adv2.py?button=JSON&type=6" \
     --data "id_list=$1")
   echo $output
   echo $output | grep '"Output"' | awk -F ':'  '{print $3}' | awk '{ print $1}'  | sed 's/"//g' | pbcopy
